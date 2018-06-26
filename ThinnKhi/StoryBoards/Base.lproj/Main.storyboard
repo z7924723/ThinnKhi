@@ -131,7 +131,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dbG-QO-zcm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Today" id="7GC-wX-rdV">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="18" maxX="0.0" maxY="-16"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="15b-qK-j8U">

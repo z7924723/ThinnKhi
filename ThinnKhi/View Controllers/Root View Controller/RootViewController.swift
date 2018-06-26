@@ -10,6 +10,14 @@ import UIKit
 
 class RootViewController: UIViewController {
   
+  // MARK: - Segues
+  private enum Segue {
+    static let segueDayMainInfoView = "SegueDayMainInfoView"
+    static let SegueDayHoursInfoView = "SegueDayHoursInfoView"
+    static let SegueSettingsView = "SegueSettingsView"
+    static let segueLocationsView = "SegueLocationsView"
+  }
+  
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()

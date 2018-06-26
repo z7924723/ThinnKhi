@@ -104,7 +104,7 @@
                 <viewControllerPlaceholder storyboardName="SettingView" id="rHB-9c-uPl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2f-XB-s3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4784" y="-755"/>
+            <point key="canvasLocation" x="4776" y="-715"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QMt-KG-xVv">
@@ -333,7 +333,7 @@ AzIyIMKwQw
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9M-nq-GHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="-84"/>
+            <point key="canvasLocation" x="4687" y="-84"/>
         </scene>
         <!--Day Main Info View Controller-->
         <scene sceneID="qEA-Ag-Omc">

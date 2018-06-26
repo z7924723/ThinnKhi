@@ -25,6 +25,8 @@
 		70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7020E1E6F600B72554 /* SettingView.storyboard */; };
 		70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7220E1E7C300B72554 /* LocationView.storyboard */; };
 		70D47D7620E20F7700B72554 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7520E20F7700B72554 /* Configuration.swift */; };
+		70D47D7920E213B700B72554 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7820E213B700B72554 /* DataManager.swift */; };
+		70D47D7C20E214BE00B72554 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7B20E214BE00B72554 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		70D47D7020E1E6F600B72554 /* SettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingView.storyboard; sourceTree = "<group>"; };
 		70D47D7220E1E7C300B72554 /* LocationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationView.storyboard; sourceTree = "<group>"; };
 		70D47D7520E20F7700B72554 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		70D47D7820E213B700B72554 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		70D47D7B20E214BE00B72554 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		700BA4E620E006AC005B3EEA /* ThinnKhi */ = {
 			isa = PBXGroup;
 			children = (
+				70D47D7A20E2149C00B72554 /* Model */,
+				70D47D7720E213AB00B72554 /* Manager */,
 				70D47D7420E20F6000B72554 /* Configuration */,
 				700BA4E720E006AC005B3EEA /* AppDelegate.swift */,
 				700BA4EE20E006AD005B3EEA /* Assets.xcassets */,
@@ -183,6 +189,22 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		70D47D7720E213AB00B72554 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				70D47D7820E213B700B72554 /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		70D47D7A20E2149C00B72554 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70D47D7B20E214BE00B72554 /* WeatherData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +290,8 @@
 				70D47D7620E20F7700B72554 /* Configuration.swift in Sources */,
 				70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */,
 				70D47D6920E1D59500B72554 /* HoursInfoCollectionViewCell.swift in Sources */,
+				70D47D7920E213B700B72554 /* DataManager.swift in Sources */,
+				70D47D7C20E214BE00B72554 /* WeatherData.swift in Sources */,
 				700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

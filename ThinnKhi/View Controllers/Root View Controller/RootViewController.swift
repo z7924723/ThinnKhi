@@ -20,6 +20,10 @@ class RootViewController: UIViewController {
   }
   
   // MARK: - Properties
+  private lazy var dataManager = {
+    return DataManager(baseURL: API.AuthenticatedBaseURL)
+  }()
+  
   private var currentLocation: CLLocation? {
     didSet {
       fetchWeatherData()
@@ -36,6 +40,8 @@ class RootViewController: UIViewController {
     
     return locationManager
   }()
+  
+  private var placemark: CLPlacemark?
   
   // MARK: - View Life Cycle
   override func viewDidLoad() {
@@ -60,7 +66,24 @@ class RootViewController: UIViewController {
   
   // MARK: - Helper Methods
   private func fetchWeatherData() {
+    guard let location = currentLocation else { return }
     
+    let latitude = location.coordinate.latitude
+    let longitude = location.coordinate.longitude
+    
+    coordinateTransform(location: location)
+    
+    
+  }
+  
+  private func coordinateTransform (location: CLLocation) {
+    let geocoder = CLGeocoder()
+    
+    geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+      if error == nil {
+        self.placemark = placemarks![0]
+      }
+    }
   }
   
   private func setupNotificationHandling() {

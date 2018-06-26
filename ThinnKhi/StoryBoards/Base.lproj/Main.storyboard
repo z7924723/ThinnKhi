@@ -190,25 +190,25 @@ AzIyIMKwQw
                                         <rect key="frame" x="0.0" y="386.66666666666669" width="375" height="50.666666666666686"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperture_arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-DZ-Lgc">
-                                                <rect key="frame" x="86.333333333333329" y="17" width="15" height="18"/>
+                                                <rect key="frame" x="92" y="17" width="15" height="18"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="18" id="5K2-mI-HbR"/>
-                                                    <constraint firstAttribute="width" constant="15" id="OX3-X3-8WX"/>
-                                                    <constraint firstAttribute="width" secondItem="Hb9-DZ-Lgc" secondAttribute="height" multiplier="5:6" id="thJ-Op-FKY"/>
+                                                    <constraint firstAttribute="width" secondItem="Hb9-DZ-Lgc" secondAttribute="height" multiplier="5:6" id="K5I-lN-32B"/>
+                                                    <constraint firstAttribute="width" constant="15" id="vf3-he-Gf5"/>
+                                                    <constraint firstAttribute="height" constant="18" id="y2a-UQ-EvO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-yz-06S" userLabel="Temperture Low Label">
-                                                <rect key="frame" x="109.33333333333333" y="11.333333333333313" width="59.333333333333329" height="29.333333333333329"/>
+                                                <rect key="frame" x="110.99999999999999" y="11.333333333333313" width="59.333333333333329" height="29.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperture_arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-x5-65R">
-                                                <rect key="frame" x="217.66666666666666" y="17" width="15" height="18"/>
+                                                <rect key="frame" x="219.33333333333334" y="17" width="15" height="18"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="8i0-x5-65R" secondAttribute="height" multiplier="5:6" id="3gr-yC-LGi"/>
-                                                    <constraint firstAttribute="height" constant="18" id="vRp-vv-miW"/>
-                                                    <constraint firstAttribute="width" constant="15" id="wGT-Sd-b7a"/>
+                                                    <constraint firstAttribute="width" constant="15" id="1dx-1H-Cdn"/>
+                                                    <constraint firstAttribute="width" secondItem="8i0-x5-65R" secondAttribute="height" multiplier="5:6" id="Jqv-Bm-htl"/>
+                                                    <constraint firstAttribute="height" constant="18" id="KQO-Aq-eYV"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-2G-pWM" userLabel="Temperture High Label">
@@ -219,14 +219,14 @@ AzIyIMKwQw
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="dcb-yz-06S" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="Abd-E4-CKq"/>
-                                            <constraint firstItem="8i0-x5-65R" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="E13-0d-M5R"/>
-                                            <constraint firstItem="8i0-x5-65R" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="1.2" id="F3F-to-3gn"/>
-                                            <constraint firstItem="dcb-yz-06S" firstAttribute="leading" secondItem="Hb9-DZ-Lgc" secondAttribute="trailing" constant="8" id="GWe-q5-6oc"/>
-                                            <constraint firstItem="fgH-2G-pWM" firstAttribute="leading" secondItem="8i0-x5-65R" secondAttribute="trailing" constant="8" id="Pil-sf-yCT"/>
-                                            <constraint firstItem="fgH-2G-pWM" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="Sbm-aN-sU8"/>
-                                            <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="0.5" id="ieu-ZB-axf"/>
-                                            <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="mmR-2H-rgh"/>
+                                            <constraint firstItem="dcb-yz-06S" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="0.75" id="3ND-0t-NxD"/>
+                                            <constraint firstItem="fgH-2G-pWM" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="AgR-zz-a3c"/>
+                                            <constraint firstItem="8i0-x5-65R" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="Cuk-v4-c75"/>
+                                            <constraint firstItem="8i0-x5-65R" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="1.21" id="Gzi-eW-PEI"/>
+                                            <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="0.53" id="MK1-j3-QPd"/>
+                                            <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="dS8-MM-l65"/>
+                                            <constraint firstItem="dcb-yz-06S" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="hkK-8D-8ob"/>
+                                            <constraint firstItem="fgH-2G-pWM" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="1.44" id="hyn-JW-pD7"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-wf-dqP" userLabel="Line View">

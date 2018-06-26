@@ -8,6 +8,6 @@
 
 import UIKit
 
-class WeekViewController: UIViewController {
+class WeekInfoViewController: UIViewController {
   
 }

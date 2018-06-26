@@ -15,7 +15,7 @@
 		700BA4FD20E0088E005B3EEA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */; };
 		700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FB20E0088E005B3EEA /* Roboto-Regular.ttf */; };
 		700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FC20E0088E005B3EEA /* Roboto-Thin.ttf */; };
-		700BA50320E00C7F005B3EEA /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50220E00C7F005B3EEA /* WeekViewController.swift */; };
+		700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */; };
 		700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */; };
 		700BA50720E02941005B3EEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* RootViewController.swift */; };
 		700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */; };
@@ -40,7 +40,7 @@
 		700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		700BA4FB20E0088E005B3EEA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		700BA4FC20E0088E005B3EEA /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		700BA50220E00C7F005B3EEA /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50620E02941005B3EEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
@@ -122,10 +122,11 @@
 		700BA50120E00B0A005B3EEA /* Weather View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				70D47D7D20E21EB100B72554 /* View Model */,
 				70D47D6720E1D51B00B72554 /* Collection View Cells */,
 				700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */,
 				700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */,
-				700BA50220E00C7F005B3EEA /* WeekViewController.swift */,
+				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
 			);
 			path = "Weather View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +204,13 @@
 				70D47D7B20E214BE00B72554 /* WeatherData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70D47D7D20E21EB100B72554 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +292,7 @@
 				700BA50720E02941005B3EEA /* RootViewController.swift in Sources */,
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
-				700BA50320E00C7F005B3EEA /* WeekViewController.swift in Sources */,
+				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
 				700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */,
 				70D47D7620E20F7700B72554 /* Configuration.swift in Sources */,

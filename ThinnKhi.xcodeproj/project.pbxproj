@@ -24,6 +24,7 @@
 		70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */; };
 		70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7020E1E6F600B72554 /* SettingView.storyboard */; };
 		70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7220E1E7C300B72554 /* LocationView.storyboard */; };
+		70D47D7620E20F7700B72554 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7520E20F7700B72554 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		70D47D7020E1E6F600B72554 /* SettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingView.storyboard; sourceTree = "<group>"; };
 		70D47D7220E1E7C300B72554 /* LocationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationView.storyboard; sourceTree = "<group>"; };
+		70D47D7520E20F7700B72554 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		700BA4E620E006AC005B3EEA /* ThinnKhi */ = {
 			isa = PBXGroup;
 			children = (
+				70D47D7420E20F6000B72554 /* Configuration */,
 				700BA4E720E006AC005B3EEA /* AppDelegate.swift */,
 				700BA4EE20E006AD005B3EEA /* Assets.xcassets */,
 				700BA50C20E034BB005B3EEA /* Extensions */,
@@ -172,6 +175,14 @@
 			path = "Locations View Controller";
 			sourceTree = "<group>";
 		};
+		70D47D7420E20F6000B72554 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				70D47D7520E20F7700B72554 /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +265,7 @@
 				700BA50320E00C7F005B3EEA /* WeekViewController.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
 				700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */,
+				70D47D7620E20F7700B72554 /* Configuration.swift in Sources */,
 				70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */,
 				70D47D6920E1D59500B72554 /* HoursInfoCollectionViewCell.swift in Sources */,
 				700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */,

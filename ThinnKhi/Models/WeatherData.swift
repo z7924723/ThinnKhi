@@ -39,6 +39,10 @@ struct DayData: Codable {
 }
 
 struct Hourly: Codable {
+  let data: [HourData]
+}
+
+struct HourData: Codable {
   let time: Date
   let icon: String
   let temperature: Double

@@ -8,14 +8,50 @@
 
 import UIKit
 
-class DayMainInfoViewController: UIViewController {
+class DayMainInfoViewController: WeatherViewController {
   
+  // MARK: - Interface Builder Properties
+  @IBOutlet weak var districtLabel: UILabel!
+  @IBOutlet weak var weatherIcon: UIImageView!
+  @IBOutlet weak var summaryLabel: UILabel!
+  @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak var temperatureLowLable: UILabel!
+  @IBOutlet weak var temperatureHighLabel: UILabel!
+  @IBOutlet weak var humidityLabel: UILabel!
+  @IBOutlet weak var precipitationLabel: UILabel!
+  @IBOutlet weak var windSpeedLabel: UILabel!
+  
+  
+  // MARK: -
+  var viewModel: DayMainInfoViewViewModel? {
+    didSet {
+      updateView()
+    }
+  }
+  
+  // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
   }
 
+  // MARK: - View Methods
+  private func updateView() {
+    if let viewModel = viewModel {
+      weatherDataContainer.isHidden = false
+      
+      districtLabel.text = viewModel.city
+      weatherIcon.image = UIImage(named: viewModel.weatherIcon)
+      temperatureLabel.text = viewModel.currentTemperature
+      temperatureHighLabel.text = viewModel.temperatureHigh
+      temperatureLowLable.text = viewModel.temperatureLow
+      humidityLabel.text = viewModel.humidity
+      precipitationLabel.text = viewModel.precipIntensity
+      windSpeedLabel.text = viewModel.windSpeed
+    }
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

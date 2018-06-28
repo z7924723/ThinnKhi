@@ -10,7 +10,6 @@
 		700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E720E006AC005B3EEA /* AppDelegate.swift */; };
 		700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */; };
 		700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4EB20E006AC005B3EEA /* Main.storyboard */; };
-		700BA4EF20E006AD005B3EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4EE20E006AD005B3EEA /* Assets.xcassets */; };
 		700BA4F220E006AD005B3EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4F020E006AD005B3EEA /* LaunchScreen.storyboard */; };
 		700BA4FD20E0088E005B3EEA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */; };
 		700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FB20E0088E005B3EEA /* Roboto-Regular.ttf */; };
@@ -19,6 +18,7 @@
 		700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */; };
 		700BA50720E02941005B3EEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* RootViewController.swift */; };
 		700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */; };
+		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		70D47D6920E1D59500B72554 /* HoursInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6820E1D59500B72554 /* HoursInfoCollectionViewCell.swift */; };
 		70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6B20E1DFFC00B72554 /* SettingsViewController.swift */; };
 		70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */; };
@@ -31,6 +31,7 @@
 		70D47D8120E2340B00B72554 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D8020E2340B00B72554 /* UserDefaults.swift */; };
 		70D47D8320E29C4800B72554 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D8220E29C4800B72554 /* Location.swift */; };
 		70D47D8520E29C7200B72554 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D8420E29C7200B72554 /* Conversions.swift */; };
+		70D96EB120E3ED7A00DF862F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96EB020E3ED7A00DF862F /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,6 @@
 		700BA4E720E006AC005B3EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainInfoViewController.swift; sourceTree = "<group>"; };
 		700BA4EC20E006AC005B3EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		700BA4EE20E006AD005B3EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700BA4F120E006AD005B3EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		700BA4F320E006AD005B3EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -48,6 +48,7 @@
 		700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50620E02941005B3EEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		70D47D6820E1D59500B72554 /* HoursInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		70D47D6B20E1DFFC00B72554 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		70D47D8020E2340B00B72554 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		70D47D8220E29C4800B72554 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		70D47D8420E29C7200B72554 /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		70D96EB020E3ED7A00DF862F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		700BA4DB20E006AC005B3EEA = {
 			isa = PBXGroup;
 			children = (
+				708B1E4B20E4B80D0094CEDE /* Assets.xcassets */,
 				700BA4E620E006AC005B3EEA /* ThinnKhi */,
 				700BA4E520E006AC005B3EEA /* Products */,
 			);
@@ -96,7 +99,6 @@
 				70D47D7720E213AB00B72554 /* Manager */,
 				70D47D7420E20F6000B72554 /* Configuration */,
 				700BA4E720E006AC005B3EEA /* AppDelegate.swift */,
-				700BA4EE20E006AD005B3EEA /* Assets.xcassets */,
 				700BA50C20E034BB005B3EEA /* Extensions */,
 				700BA4F920E00873005B3EEA /* Font */,
 				700BA4F320E006AD005B3EEA /* Info.plist */,
@@ -132,6 +134,7 @@
 			children = (
 				700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */,
 				700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */,
+				70D96EB020E3ED7A00DF862F /* WeatherViewController.swift */,
 				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
 				70D47D6720E1D51B00B72554 /* Collection View Cells */,
 				70D47D7D20E21EB100B72554 /* View Model */,
@@ -288,8 +291,8 @@
 				70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */,
 				700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */,
 				700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */,
-				700BA4EF20E006AD005B3EEA /* Assets.xcassets in Resources */,
 				700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */,
+				708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */,
 				70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700BA50720E02941005B3EEA /* RootViewController.swift in Sources */,
+				70D96EB120E3ED7A00DF862F /* WeatherViewController.swift in Sources */,
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
 				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,

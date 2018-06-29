@@ -15,11 +15,15 @@ class RootViewController: UIViewController {
   private enum Segue {
     static let segueDayMainInfoView = "SegueDayMainInfoView"
     static let SegueDayHoursInfoView = "SegueDayHoursInfoView"
-    static let SegueSettingsView = "SegueSettingsView"
-    static let segueLocationsView = "SegueLocationsView"
+//    static let SegueSettingsView = "SegueSettingsView"
+//    static let segueLocationsView = "SegueLocationsView"
   }
   
   // MARK: - Properties
+  @IBOutlet private var dayMainInfoViewController: DayMainInfoViewController!
+  @IBOutlet private var dayHoursInfoViewController: DayHoursInfoViewController!
+  
+  // MARK: -
   private lazy var dataManager = {
     return DataManager(baseURL: API.AuthenticatedBaseURL)
   }()
@@ -54,6 +58,30 @@ class RootViewController: UIViewController {
     setupNotificationHandling()
   }
   
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let identifier = segue.identifier else { return }
+    
+    switch identifier {
+    case Segue.segueDayMainInfoView:
+      guard let destination = segue.destination as? DayMainInfoViewController else {
+        fatalError("Unexpected Destination View Controller")
+      }
+      
+      self.dayMainInfoViewController = destination
+      
+    case Segue.SegueDayHoursInfoView:
+      guard let destination = segue.destination as? DayHoursInfoViewController else {
+        fatalError("Unexpected Destination View Controller")
+      }
+      
+      self.dayHoursInfoViewController = destination
+
+    default:
+      break
+    }
+  }
+  
   // MARK: - Unwind Actions
   @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
     
@@ -73,7 +101,15 @@ class RootViewController: UIViewController {
     
     coordinateTransform(location: location)
     
-    
+    dataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (weatherData, error) in
+      if let error = error {
+        print(error)
+      } else if let weatherData = weatherData {
+        self.dayMainInfoViewController.viewModel = DayMainInfoViewViewModel(weatherData: weatherData, coordinateInfo: self.placemark!)
+        
+        self.dayHoursInfoViewController.viewModel = DayHoursInfoViewViewModel(weatherData: weatherData.hourly)
+      }
+    }
   }
   
   private func coordinateTransform (location: CLLocation) {

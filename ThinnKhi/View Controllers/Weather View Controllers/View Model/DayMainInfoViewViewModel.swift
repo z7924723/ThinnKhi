@@ -70,7 +70,7 @@ struct DayMainInfoViewViewModel {
     let city = coordinateInfo.locality!
     return String(city)
   }
-
+  
   // MARK: - Helper Method
   private func temperatureConversion(temperature: Double) -> String {
     switch UserDefaults.temperatureNotation() {
@@ -80,4 +80,5 @@ struct DayMainInfoViewViewModel {
       return String(format: "%.1f °C", temperature.toCelcius())
     }
   }
+
 }

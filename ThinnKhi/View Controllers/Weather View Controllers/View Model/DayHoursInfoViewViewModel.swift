@@ -11,14 +11,14 @@ import Foundation
 struct DayHoursInfoViewViewModel {
   
   // MARK: - Properties
-  let HourlyData: Hourly
+  let weatherData: Hourly
   
   var numberOfHours: Int {
-    return HourlyData.data.count
+    return weatherData.data.count
   }
   
   func viewModel(for index: Int) -> HourlyDataViewViewModel {
-    return HourlyDataViewViewModel(hourData: HourlyData.data[index])
+    return HourlyDataViewViewModel(hourData: weatherData.data[index])
   }
 
 }

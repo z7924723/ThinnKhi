@@ -22,7 +22,7 @@ class DayMainInfoViewController: WeatherViewController {
   @IBOutlet weak var windSpeedLabel: UILabel!
   
   
-  // MARK: -
+  // MARK: - Properties
   var viewModel: DayMainInfoViewViewModel? {
     didSet {
       updateView()

@@ -16,8 +16,10 @@
 		700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FC20E0088E005B3EEA /* Roboto-Thin.ttf */; };
 		700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */; };
 		700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */; };
-		700BA50720E02941005B3EEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* RootViewController.swift */; };
+		700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* DayInfoViewController.swift */; };
 		700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */; };
+		7067896420E7E25E00024E76 /* SevenDaysInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */; };
+		7067896720E7E83B00024E76 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067896620E7E83B00024E76 /* HomeTabBarController.swift */; };
 		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */; };
 		708B1E5020E4CDBB0094CEDE /* HourlyDataViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */; };
@@ -48,8 +50,10 @@
 		700BA4FC20E0088E005B3EEA /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewController.swift; sourceTree = "<group>"; };
-		700BA50620E02941005B3EEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		700BA50620E02941005B3EEA /* DayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDaysInfoViewController.swift; sourceTree = "<group>"; };
+		7067896620E7E83B00024E76 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewViewModel.swift; sourceTree = "<group>"; };
 		708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyDataViewViewModel.swift; sourceTree = "<group>"; };
@@ -125,9 +129,10 @@
 		700BA50020E00AE1005B3EEA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7067896520E7E78600024E76 /* Tab Bar Controller */,
 				70D47D6D20E1E1DA00B72554 /* Locations View Controller */,
 				70D47D6A20E1DFD600B72554 /* Settings View Controller */,
-				700BA50820E02957005B3EEA /* Root View Controller */,
+				700BA50820E02957005B3EEA /* Day Info View Controller */,
 				700BA50120E00B0A005B3EEA /* Weather View Controllers */,
 			);
 			path = "View Controllers";
@@ -142,16 +147,17 @@
 				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
 				70D47D6720E1D51B00B72554 /* Collection View Cells */,
 				70D47D7D20E21EB100B72554 /* View Model */,
+				7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */,
 			);
 			path = "Weather View Controllers";
 			sourceTree = "<group>";
 		};
-		700BA50820E02957005B3EEA /* Root View Controller */ = {
+		700BA50820E02957005B3EEA /* Day Info View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				700BA50620E02941005B3EEA /* RootViewController.swift */,
+				700BA50620E02941005B3EEA /* DayInfoViewController.swift */,
 			);
-			path = "Root View Controller";
+			path = "Day Info View Controller";
 			sourceTree = "<group>";
 		};
 		700BA50C20E034BB005B3EEA /* Extensions */ = {
@@ -162,6 +168,14 @@
 				70D47D8420E29C7200B72554 /* Conversions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7067896520E7E78600024E76 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7067896620E7E83B00024E76 /* HomeTabBarController.swift */,
+			);
+			path = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		70D47D6620E0E50D00B72554 /* StoryBoards */ = {
@@ -310,11 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700BA50720E02941005B3EEA /* RootViewController.swift in Sources */,
+				700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */,
 				70D96EB120E3ED7A00DF862F /* WeatherViewController.swift in Sources */,
+				7067896720E7E83B00024E76 /* HomeTabBarController.swift in Sources */,
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
 				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,
+				7067896420E7E25E00024E76 /* SevenDaysInfoViewController.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
 				70D47D8520E29C7200B72554 /* Conversions.swift in Sources */,
 				708B1E5020E4CDBB0094CEDE /* HourlyDataViewViewModel.swift in Sources */,

@@ -30,7 +30,7 @@ class DayInfoViewController: UIViewController {
   
   private var currentLocation: CLLocation? {
     didSet {
-      fetchWeatherData()
+      coordinateTransform(location: currentLocation!)
     }
   }
   
@@ -45,7 +45,11 @@ class DayInfoViewController: UIViewController {
     return locationManager
   }()
   
-  private var placemark: CLPlacemark?
+  private var placemark: CLPlacemark? {
+    didSet {
+      fetchWeatherData()
+    }
+  }
   
   // MARK: - View Life Cycle
   override func viewDidLoad() {
@@ -56,6 +60,7 @@ class DayInfoViewController: UIViewController {
     self.view.layer.insertSublayer(backgroundLayer, at: 0)
     
     setupNotificationHandling()
+    
   }
   
   // MARK: - Navigation
@@ -88,7 +93,7 @@ class DayInfoViewController: UIViewController {
   }
   
   // MARK: - Notification Handling
-  @objc func applicationDidBecomeActive(notification: Notification) {
+  @objc func applicationDidBecomeActive(_ notification: Notification) {
     requestLocation()
   }
   
@@ -99,8 +104,6 @@ class DayInfoViewController: UIViewController {
     let latitude = location.coordinate.latitude
     let longitude = location.coordinate.longitude
     
-    coordinateTransform(location: location)
-    
     dataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (weatherData, error) in
       if let error = error {
         print(error)
@@ -108,6 +111,7 @@ class DayInfoViewController: UIViewController {
         self.dayMainInfoViewController.viewModel = DayMainInfoViewViewModel(weatherData: weatherData, coordinateInfo: self.placemark!)
 
         self.dayHoursInfoViewController.viewModel = DayHoursInfoViewViewModel(weatherData: weatherData.hourly)
+        
       }
     }
   }
@@ -124,17 +128,20 @@ class DayInfoViewController: UIViewController {
   
   private func setupNotificationHandling() {
     let notificationCenter = NotificationCenter.default
-    notificationCenter.addObserver(self, selector: #selector(DayInfoViewController.applicationDidBecomeActive(notification:)), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+    notificationCenter.addObserver(self,
+                                   selector: #selector(DayInfoViewController.applicationDidBecomeActive(_:)),
+                                   name: Notification.Name.UIApplicationDidBecomeActive,
+                                   object: nil)
   }
   
   private func requestLocation() {
     // Configure Location Manager
     locationManager.delegate = self
-    
+
     if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
       // Request Current Location
       locationManager.requestLocation()
-      
+
     } else {
       // Request Authorization
       locationManager.requestWhenInUseAuthorization()

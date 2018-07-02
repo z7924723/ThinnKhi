@@ -13,8 +13,12 @@ struct DayHoursInfoViewViewModel {
   // MARK: - Properties
   let weatherData: Hourly
   
+  var numberOfSection: Int {
+    return 1
+  }
+  
   var numberOfHours: Int {
-    return weatherData.data.count
+    return 24
   }
   
   func viewModel(for index: Int) -> HourlyDataViewViewModel {

@@ -40,9 +40,9 @@ struct HourlyDataViewViewModel {
   private func temperatureConversion(temperature: Double) -> String {
     switch UserDefaults.temperatureNotation() {
     case .fahrenheit:
-      return String(format: "%.1f °F", temperature)
+      return String(format: "%.1f °", temperature)
     default:
-      return String(format: "%.1f °C", temperature.toCelcius())
+      return String(format: "%.1f °", temperature.toCelcius())
     }
   }
 

@@ -9,13 +9,10 @@
 import Foundation
 
 enum TimeNotation: Int {
-  case twelveHour
   case twentyFourHour
   
   var timeFormat: String {
     switch self {
-    case .twelveHour:
-      return "hh:mm a"
     default:
       return "HH:mm"
     }
@@ -44,7 +41,7 @@ extension UserDefaults {
   // MARK: - Time Notation
   static func timeNotation() -> TimeNotation {
     let storedValue = UserDefaults.standard.integer(forKey: UserDefaults.Keys.timeNotation)
-    return TimeNotation(rawValue: storedValue) ?? TimeNotation.twelveHour
+    return TimeNotation(rawValue: storedValue) ?? TimeNotation.twentyFourHour
   }
   
   static func setTimeNotation(timeNotation: TimeNotation) {

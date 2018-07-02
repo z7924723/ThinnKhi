@@ -11,6 +11,12 @@ import CoreLocation
 
 struct DayMainInfoViewViewModel {
   
+  // MARK: - Enum
+  enum TemperatureType {
+    static let mainTemerature = 1
+    static let otherTemerature = 2
+  }
+  
   // MARK: - Properties
   let weatherData: WeatherData
   let coordinateInfo: CLPlacemark
@@ -21,19 +27,19 @@ struct DayMainInfoViewViewModel {
   var currentTemperature: String {
     let currentTemperature = weatherData.currently.temperature
 
-    return temperatureConversion(temperature: currentTemperature)
+    return temperatureConversion(temperature: currentTemperature, type: TemperatureType.mainTemerature)
   }
   
   var temperatureHigh: String {
     let temperatureHigh = weatherData.daily.data[0].temperatureHigh
     
-    return temperatureConversion(temperature: temperatureHigh)
+    return temperatureConversion(temperature: temperatureHigh, type: TemperatureType.otherTemerature)
   }
   
   var temperatureLow: String {
     let temperatureLow = weatherData.daily.data[0].temperatureLow
     
-    return temperatureConversion(temperature: temperatureLow)
+    return temperatureConversion(temperature: temperatureLow, type: TemperatureType.otherTemerature)
   }
   
   var precipIntensity: String {
@@ -72,12 +78,19 @@ struct DayMainInfoViewViewModel {
   }
   
   // MARK: - Helper Method
-  private func temperatureConversion(temperature: Double) -> String {
+  private func temperatureConversion(temperature: Double, type: Int) -> String {
     switch UserDefaults.temperatureNotation() {
     case .fahrenheit:
-      return String(format: "%.1f °F", temperature)
+      guard type == TemperatureType.otherTemerature else {
+        return String(format: "%.1f °F", temperature)
+      }
+      return String(format: "%.1f °", temperature)
+      
     default:
-      return String(format: "%.1f °C", temperature.toCelcius())
+      guard type == TemperatureType.otherTemerature else {
+        return String(format: "%.1f °F", temperature)
+      }
+      return String(format: "%.1f °", temperature.toCelcius())
     }
   }
 

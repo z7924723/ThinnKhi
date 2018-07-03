@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7004852F20EA17620082573F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004852E20EA17620082573F /* UIImage.swift */; };
 		700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E720E006AC005B3EEA /* AppDelegate.swift */; };
 		700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */; };
 		700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4EB20E006AC005B3EEA /* Main.storyboard */; };
@@ -18,8 +19,7 @@
 		700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */; };
 		700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* DayInfoViewController.swift */; };
 		700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */; };
-		7067896420E7E25E00024E76 /* SevenDaysInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */; };
-		7067896720E7E83B00024E76 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067896620E7E83B00024E76 /* HomeTabBarController.swift */; };
+		7053DB0020EB2815009058C4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053DAFF20EB2815009058C4 /* Notification.swift */; };
 		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */; };
 		708B1E5020E4CDBB0094CEDE /* HourlyDataViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */; };
@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7004852E20EA17620082573F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		700BA4E420E006AC005B3EEA /* ThinnKhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinnKhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700BA4E720E006AC005B3EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainInfoViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +53,7 @@
 		700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50620E02941005B3EEA /* DayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
-		7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDaysInfoViewController.swift; sourceTree = "<group>"; };
-		7067896620E7E83B00024E76 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		7053DAFF20EB2815009058C4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewViewModel.swift; sourceTree = "<group>"; };
 		708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyDataViewViewModel.swift; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 		700BA50020E00AE1005B3EEA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7067896520E7E78600024E76 /* Tab Bar Controller */,
 				70D47D6D20E1E1DA00B72554 /* Locations View Controller */,
 				70D47D6A20E1DFD600B72554 /* Settings View Controller */,
 				700BA50820E02957005B3EEA /* Day Info View Controller */,
@@ -147,7 +146,6 @@
 				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
 				70D47D6720E1D51B00B72554 /* Collection View Cells */,
 				70D47D7D20E21EB100B72554 /* View Model */,
-				7067896320E7E25E00024E76 /* SevenDaysInfoViewController.swift */,
 			);
 			path = "Weather View Controllers";
 			sourceTree = "<group>";
@@ -166,16 +164,10 @@
 				700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */,
 				70D47D8020E2340B00B72554 /* UserDefaults.swift */,
 				70D47D8420E29C7200B72554 /* Conversions.swift */,
+				7004852E20EA17620082573F /* UIImage.swift */,
+				7053DAFF20EB2815009058C4 /* Notification.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7067896520E7E78600024E76 /* Tab Bar Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7067896620E7E83B00024E76 /* HomeTabBarController.swift */,
-			);
-			path = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		70D47D6620E0E50D00B72554 /* StoryBoards */ = {
@@ -325,13 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */,
+				7004852F20EA17620082573F /* UIImage.swift in Sources */,
 				70D96EB120E3ED7A00DF862F /* WeatherViewController.swift in Sources */,
-				7067896720E7E83B00024E76 /* HomeTabBarController.swift in Sources */,
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
 				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,
-				7067896420E7E25E00024E76 /* SevenDaysInfoViewController.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
+				7053DB0020EB2815009058C4 /* Notification.swift in Sources */,
 				70D47D8520E29C7200B72554 /* Conversions.swift in Sources */,
 				708B1E5020E4CDBB0094CEDE /* HourlyDataViewViewModel.swift in Sources */,
 				700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */,

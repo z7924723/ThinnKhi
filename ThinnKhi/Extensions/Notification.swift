@@ -10,5 +10,5 @@ import Foundation
 
 extension Notification.Name {
   static let weatherDataDidSet = Notification.Name("WeatherDataDidSet")
-  static let currentLocationDidSet = Notification.Name("CurrentLocationDidSet")
+  static let placemarkDidSet = Notification.Name("PlacemarkDidSet")
 }

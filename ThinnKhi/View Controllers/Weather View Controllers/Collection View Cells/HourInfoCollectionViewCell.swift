@@ -17,7 +17,6 @@ class HourInfoCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet weak var weatherIcon: UIImageView!
-  @IBOutlet weak var precipitationLabel: UILabel!
   
   // MARK: - Initialization
   override func awakeFromNib() {
@@ -29,7 +28,6 @@ class HourInfoCollectionViewCell: UICollectionViewCell {
     timeLabel.text = viewModel.time
     temperatureLabel.text = viewModel.temperature
     weatherIcon.image = UIImage(named: viewModel.weatherIcon)
-    precipitationLabel.text = viewModel.precipIntensity
   }
 
 }

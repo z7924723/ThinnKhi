@@ -19,6 +19,10 @@
 		700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */; };
 		700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50620E02941005B3EEA /* DayInfoViewController.swift */; };
 		700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */; };
+		701698EA20EC713500DE7924 /* WeekInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698E820EC713500DE7924 /* WeekInfoTableViewCell.swift */; };
+		701698EB20EC713500DE7924 /* WeekInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701698E920EC713500DE7924 /* WeekInfoTableViewCell.xib */; };
+		701698ED20EC9B8F00DE7924 /* WeekInfoTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */; };
+		701698EF20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */; };
 		7053DB0020EB2815009058C4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053DAFF20EB2815009058C4 /* Notification.swift */; };
 		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */; };
@@ -53,6 +57,10 @@
 		700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50620E02941005B3EEA /* DayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoViewController.swift; sourceTree = "<group>"; };
 		700BA50D20E034E6005B3EEA /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		701698E820EC713500DE7924 /* WeekInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoTableViewCell.swift; sourceTree = "<group>"; };
+		701698E920EC713500DE7924 /* WeekInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekInfoTableViewCell.xib; sourceTree = "<group>"; };
+		701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekInfoTableViewSectionHeader.xib; sourceTree = "<group>"; };
 		7053DAFF20EB2815009058C4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewViewModel.swift; sourceTree = "<group>"; };
@@ -132,7 +140,7 @@
 				70D47D6D20E1E1DA00B72554 /* Locations View Controller */,
 				70D47D6A20E1DFD600B72554 /* Settings View Controller */,
 				700BA50820E02957005B3EEA /* Day Info View Controller */,
-				700BA50120E00B0A005B3EEA /* Weather View Controllers */,
+				70C4269F20EBCD8100B61D05 /* Week Info View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -140,12 +148,8 @@
 		700BA50120E00B0A005B3EEA /* Weather View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */,
-				700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */,
 				70D96EB020E3ED7A00DF862F /* WeatherViewController.swift */,
-				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
-				70D47D6720E1D51B00B72554 /* Collection View Cells */,
-				70D47D7D20E21EB100B72554 /* View Model */,
+				70C4269E20EBCD4900B61D05 /* Daily Infomation */,
 			);
 			path = "Weather View Controllers";
 			sourceTree = "<group>";
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				700BA50620E02941005B3EEA /* DayInfoViewController.swift */,
+				700BA50120E00B0A005B3EEA /* Weather View Controllers */,
 			);
 			path = "Day Info View Controller";
 			sourceTree = "<group>";
@@ -168,6 +173,37 @@
 				7053DAFF20EB2815009058C4 /* Notification.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70C4269E20EBCD4900B61D05 /* Daily Infomation */ = {
+			isa = PBXGroup;
+			children = (
+				700BA50420E00CCC005B3EEA /* DayHoursInfoViewController.swift */,
+				700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */,
+				70D47D6720E1D51B00B72554 /* Collection View Cells */,
+				70D47D7D20E21EB100B72554 /* View Model */,
+			);
+			path = "Daily Infomation";
+			sourceTree = "<group>";
+		};
+		70C4269F20EBCD8100B61D05 /* Week Info View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
+				70C426A020EBCDA500B61D05 /* TableView Cell */,
+			);
+			path = "Week Info View Controller";
+			sourceTree = "<group>";
+		};
+		70C426A020EBCDA500B61D05 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				701698E820EC713500DE7924 /* WeekInfoTableViewCell.swift */,
+				701698E920EC713500DE7924 /* WeekInfoTableViewCell.xib */,
+				701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */,
+				701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */,
+			);
+			path = "TableView Cell";
 			sourceTree = "<group>";
 		};
 		70D47D6620E0E50D00B72554 /* StoryBoards */ = {
@@ -302,7 +338,9 @@
 				700BA4F220E006AD005B3EEA /* LaunchScreen.storyboard in Resources */,
 				70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */,
 				700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */,
+				701698EF20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib in Resources */,
 				700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */,
+				701698EB20EC713500DE7924 /* WeekInfoTableViewCell.xib in Resources */,
 				700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */,
 				708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */,
 				70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */,
@@ -322,6 +360,7 @@
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
 				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,
+				701698EA20EC713500DE7924 /* WeekInfoTableViewCell.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
 				7053DB0020EB2815009058C4 /* Notification.swift in Sources */,
 				70D47D8520E29C7200B72554 /* Conversions.swift in Sources */,
@@ -330,6 +369,7 @@
 				70D47D7620E20F7700B72554 /* Configuration.swift in Sources */,
 				70D47D8320E29C4800B72554 /* Location.swift in Sources */,
 				70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */,
+				701698ED20EC9B8F00DE7924 /* WeekInfoTableViewSectionHeader.swift in Sources */,
 				70D47D6920E1D59500B72554 /* HourInfoCollectionViewCell.swift in Sources */,
 				708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */,
 				70D47D7920E213B700B72554 /* DataManager.swift in Sources */,

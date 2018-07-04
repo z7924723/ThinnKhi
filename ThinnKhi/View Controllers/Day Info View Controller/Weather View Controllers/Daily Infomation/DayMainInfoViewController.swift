@@ -48,7 +48,7 @@ class DayMainInfoViewController: WeatherViewController {
       temperatureHighLabel.text = viewModel.temperatureHigh
       temperatureLowLable.text = viewModel.temperatureLow
       humidityLabel.text = viewModel.humidity
-      precipitationLabel.text = viewModel.precipIntensity
+      precipitationLabel.text = viewModel.precipProbability
       windSpeedLabel.text = viewModel.windSpeed
     }
   }

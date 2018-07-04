@@ -42,9 +42,9 @@ struct DayMainInfoViewViewModel {
     return temperatureConversion(temperature: temperatureLow, type: TemperatureType.otherTemerature)
   }
   
-  var precipIntensity: String {
-    let precipIntensity = weatherData.currently.precipIntensity
-    return String(format: "%.f %%", precipIntensity * 100)
+  var precipProbability: String {
+    let precipProbability = weatherData.currently.precipProbability
+    return String(format: "%.f %%", precipProbability * 100)
   }
   
   var humidity: String {

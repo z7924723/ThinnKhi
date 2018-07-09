@@ -82,15 +82,15 @@ struct DayMainInfoViewViewModel {
     switch UserDefaults.temperatureNotation() {
     case .fahrenheit:
       guard type == TemperatureType.otherTemerature else {
-        return String(format: "%.1f °F", temperature)
+        return String(format: "%.1f°F", temperature)
       }
-      return String(format: "%.1f °", temperature)
+      return String(format: "%.1f°C", temperature)
       
     default:
       guard type == TemperatureType.otherTemerature else {
-        return String(format: "%.1f °F", temperature)
+        return String(format: "%.1f°F", temperature)
       }
-      return String(format: "%.1f °", temperature.toCelcius())
+      return String(format: "%.1f°C", temperature.toCelcius())
     }
   }
 

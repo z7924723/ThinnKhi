@@ -24,6 +24,10 @@ struct DayMainInfoViewViewModel {
   // MARK: -
   private let dateFormatter = DateFormatter()
   
+  var summary: String {
+    return String(weatherData.currently.summary)
+  }
+  
   var currentTemperature: String {
     let currentTemperature = weatherData.currently.temperature
 

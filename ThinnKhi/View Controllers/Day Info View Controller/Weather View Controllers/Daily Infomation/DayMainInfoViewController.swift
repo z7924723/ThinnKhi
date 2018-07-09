@@ -46,7 +46,7 @@ class DayMainInfoViewController: WeatherViewController {
       
       districtLabel.text = viewModel.city
       weatherIcon.image = UIImage(named: viewModel.weatherIcon)
-      summaryLabel.text = viewModel.weatherIcon
+      summaryLabel.text = viewModel.summary
       temperatureLabel.text = viewModel.currentTemperature
       temperatureHighLabel.text = viewModel.temperatureHigh
       temperatureLowLable.text = viewModel.temperatureLow

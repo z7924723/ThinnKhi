@@ -75,6 +75,8 @@ class DayInfoViewController: UIViewController {
     let tabBar = self.tabBarController!.tabBar
     let tabButtonLineColors = #colorLiteral(red: 0.9411764706, green: 0.1019607843, blue: 0.1882352941, alpha: 1)
     tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: tabButtonLineColors, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 2.0)
+    
+    tabBar.isUserInteractionEnabled = false
   }
   
   // MARK: - Navigation

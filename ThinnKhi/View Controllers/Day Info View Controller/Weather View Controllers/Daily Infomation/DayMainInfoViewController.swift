@@ -39,7 +39,10 @@ class DayMainInfoViewController: WeatherViewController {
   // MARK: - View Methods
   private func updateView() {
     if let viewModel = viewModel {
+      let tabBar = self.tabBarController!.tabBar
+      
       weatherDataContainer.isHidden = false
+      tabBar.isUserInteractionEnabled = true
       
       districtLabel.text = viewModel.city
       weatherIcon.image = UIImage(named: viewModel.weatherIcon)

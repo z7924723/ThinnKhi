@@ -47,6 +47,8 @@ class DayInfoViewController: UIViewController {
   
   private var placemark: CLPlacemark? {
     didSet {
+      NotificationCenter.default.post(name: .placemarkDidSet, object: placemark)
+
       fetchWeatherData()
     }
   }
@@ -55,12 +57,24 @@ class DayInfoViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupBackground()
+    setupTabBar()
+
+    setupNotificationHandling()
+    
+  }
+  
+  // MARK: - View Methods
+  private func setupBackground() {
     let backgroundLayer = CAGradientLayer().thinnKhiBackgroundColor()
     backgroundLayer.frame = self.view.bounds
     self.view.layer.insertSublayer(backgroundLayer, at: 0)
-    
-    setupNotificationHandling()
-    
+  }
+  
+  private func setupTabBar() {
+    let tabBar = self.tabBarController!.tabBar
+    let tabButtonLineColors = #colorLiteral(red: 0.9411764706, green: 0.1019607843, blue: 0.1882352941, alpha: 1)
+    tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: tabButtonLineColors, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 2.0)
   }
   
   // MARK: - Navigation
@@ -108,6 +122,8 @@ class DayInfoViewController: UIViewController {
       if let error = error {
         print(error)
       } else if let weatherData = weatherData {
+        NotificationCenter.default.post(name: .weatherDataDidSet, object: weatherData.daily)
+        
         self.dayMainInfoViewController.viewModel = DayMainInfoViewViewModel(weatherData: weatherData, coordinateInfo: self.placemark!)
 
         self.dayHoursInfoViewController.viewModel = DayHoursInfoViewViewModel(weatherData: weatherData.hourly)

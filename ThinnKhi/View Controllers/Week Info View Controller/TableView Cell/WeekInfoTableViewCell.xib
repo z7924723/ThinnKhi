@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="WeekInfoTableViewCell" customModule="ThinnKhi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humid throughout the day and breezy starting in the afternoon, continuing until evening." textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NoG-5x-Wzx" userLabel="Summary Label">
+                        <rect key="frame" x="20" y="11" width="380" height="32"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fif-IF-0eY" userLabel="Humidity Label">
+                        <rect key="frame" x="65" y="63.5" width="46" height="19"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="e2o-ax-n2B" userLabel="Humidity Icon">
+                        <rect key="frame" x="15" y="50.5" width="42" height="45"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="precipitation" translatesAutoresizingMaskIntoConstraints="NO" id="9zc-Pl-oJq" userLabel="Precipitation Icon">
+                        <rect key="frame" x="151" y="51" width="42" height="45"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-tz-zf1" userLabel="Precipitation Label">
+                        <rect key="frame" x="201" y="64" width="46" height="19"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windSpeed" translatesAutoresizingMaskIntoConstraints="NO" id="AID-Kb-bH3" userLabel="Wind Speed Icon">
+                        <rect key="frame" x="277" y="51" width="42" height="45"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q9-tp-1CT">
+                        <rect key="frame" x="327" y="64" width="39.5" height="19"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-tX-ICj" userLabel="Separator Line View">
+                        <rect key="frame" x="0.0" y="98" width="420" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KWJ-wE-iSX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Fif-IF-0eY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.11" id="58i-vG-tib"/>
+                    <constraint firstItem="Fif-IF-0eY" firstAttribute="leading" secondItem="e2o-ax-n2B" secondAttribute="trailing" constant="8" id="9Pg-Fd-Aez"/>
+                    <constraint firstItem="AID-Kb-bH3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="9iD-rG-2c1"/>
+                    <constraint firstItem="9zc-Pl-oJq" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="A1M-Mk-H5W"/>
+                    <constraint firstItem="NQO-tX-ICj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GFY-4A-MjT"/>
+                    <constraint firstItem="8Q9-tp-1CT" firstAttribute="leading" secondItem="AID-Kb-bH3" secondAttribute="trailing" constant="8" id="Iwy-rC-nkj"/>
+                    <constraint firstAttribute="bottom" secondItem="e2o-ax-n2B" secondAttribute="bottom" constant="4" id="Jka-z3-GHE"/>
+                    <constraint firstItem="e2o-ax-n2B" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="K7p-CU-r0w"/>
+                    <constraint firstAttribute="trailing" secondItem="NQO-tX-ICj" secondAttribute="trailing" id="L7o-od-gew"/>
+                    <constraint firstItem="9zc-Pl-oJq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.82" id="M3k-2I-UvZ"/>
+                    <constraint firstItem="9zc-Pl-oJq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="MMW-au-gqb"/>
+                    <constraint firstItem="ZBP-tz-zf1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.11" id="PrS-Qn-jXV"/>
+                    <constraint firstItem="AID-Kb-bH3" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="Tst-Vt-1s5"/>
+                    <constraint firstItem="e2o-ax-n2B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="TtY-hN-XGe"/>
+                    <constraint firstAttribute="bottom" secondItem="NQO-tX-ICj" secondAttribute="bottom" id="YCJ-Wz-KvP"/>
+                    <constraint firstItem="Fif-IF-0eY" firstAttribute="centerY" secondItem="e2o-ax-n2B" secondAttribute="centerY" id="aiA-bb-P04"/>
+                    <constraint firstItem="ZBP-tz-zf1" firstAttribute="centerY" secondItem="9zc-Pl-oJq" secondAttribute="centerY" id="ckN-Qv-qOw"/>
+                    <constraint firstItem="NoG-5x-Wzx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cqt-VC-8Bt"/>
+                    <constraint firstItem="AID-Kb-bH3" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.45" id="e4B-tv-DGr"/>
+                    <constraint firstItem="NoG-5x-Wzx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eQc-cX-l7N"/>
+                    <constraint firstItem="9zc-Pl-oJq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.45" id="izJ-mQ-KGg"/>
+                    <constraint firstItem="ZBP-tz-zf1" firstAttribute="leading" secondItem="9zc-Pl-oJq" secondAttribute="trailing" constant="8" id="kIm-pl-3uM"/>
+                    <constraint firstItem="8Q9-tp-1CT" firstAttribute="centerY" secondItem="AID-Kb-bH3" secondAttribute="centerY" id="ood-ym-pUk"/>
+                    <constraint firstItem="e2o-ax-n2B" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.45" id="pZZ-yf-emB"/>
+                    <constraint firstItem="NoG-5x-Wzx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="sUl-eH-kSt"/>
+                    <constraint firstItem="e2o-ax-n2B" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="uU9-nw-giq"/>
+                    <constraint firstItem="AID-Kb-bH3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.42" id="wNa-5p-4tQ"/>
+                    <constraint firstItem="NoG-5x-Wzx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wzi-kk-N3c"/>
+                    <constraint firstItem="NQO-tX-ICj" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="zbF-u7-cbo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="humidityLabel" destination="Fif-IF-0eY" id="wwE-MB-Zdz"/>
+                <outlet property="precipitationLabel" destination="ZBP-tz-zf1" id="4WA-Np-b09"/>
+                <outlet property="summaryLabel" destination="NoG-5x-Wzx" id="D9F-3Y-Yyz"/>
+                <outlet property="windSpeedLabel" destination="8Q9-tp-1CT" id="NfR-wT-p7c"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="humidity" width="40" height="40"/>
+        <image name="precipitation" width="40" height="40"/>
+        <image name="windSpeed" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kVn-cf-AhR">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,45 +11,113 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Thin.ttf">
-            <string>Roboto-Thin</string>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
         </array>
     </customFonts>
     <scenes>
-        <!--7 days-->
+        <!--Thinn Khi-->
         <scene sceneID="3X7-Wo-oSh">
             <objects>
-                <viewController id="s6E-XD-H1u" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SevenDaysInfo" id="s6E-XD-H1u" customClass="WeekInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ay-0v-YWw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWD-r7-nLs">
+                                <rect key="frame" x="0.0" y="64" width="320" height="45.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="rkA-46-q7e" userLabel="Location Icon">
+                                        <rect key="frame" x="5" y="8" width="29" height="29"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-Ia-ENS" userLabel="District Label">
+                                        <rect key="frame" x="42" y="12" width="224" height="23"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW7-Kb-100">
+                                        <rect key="frame" x="288" y="9" width="32" height="29"/>
+                                        <state key="normal" image="morefavorite"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.29803921568627451" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KK8-Ia-ENS" firstAttribute="height" secondItem="iWD-r7-nLs" secondAttribute="height" multiplier="0.5" id="2xl-Ii-7vO"/>
+                                    <constraint firstItem="KK8-Ia-ENS" firstAttribute="width" secondItem="iWD-r7-nLs" secondAttribute="width" multiplier="0.7" id="5UK-Dy-bqY"/>
+                                    <constraint firstItem="kW7-Kb-100" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="8ah-Fu-DQY"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KK8-Ia-ENS" secondAttribute="trailing" constant="20" symbolic="YES" id="RB8-SB-onZ"/>
+                                    <constraint firstItem="rkA-46-q7e" firstAttribute="centerX" secondItem="iWD-r7-nLs" secondAttribute="centerX" multiplier="0.12" id="REN-Lg-hDv"/>
+                                    <constraint firstItem="KK8-Ia-ENS" firstAttribute="leading" secondItem="rkA-46-q7e" secondAttribute="trailing" constant="8" id="X8E-GB-36t"/>
+                                    <constraint firstItem="rkA-46-q7e" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="bzm-zt-tos"/>
+                                    <constraint firstItem="KK8-Ia-ENS" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="g4R-Ju-t8T"/>
+                                    <constraint firstItem="kW7-Kb-100" firstAttribute="width" secondItem="iWD-r7-nLs" secondAttribute="width" multiplier="0.1" id="nkV-aM-R79"/>
+                                    <constraint firstItem="kW7-Kb-100" firstAttribute="centerX" secondItem="iWD-r7-nLs" secondAttribute="centerX" multiplier="1.9" id="sDY-Cv-DtO"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-KT-Tkj">
+                                <rect key="frame" x="0.0" y="109.5" width="320" height="409.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="s6E-XD-H1u" id="xC5-Rw-gEV"/>
+                                    <outlet property="delegate" destination="s6E-XD-H1u" id="IOe-Nv-yD3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ubP-KT-Tkj" firstAttribute="top" secondItem="iWD-r7-nLs" secondAttribute="bottom" id="0kp-Sx-c94"/>
+                            <constraint firstItem="mtn-Us-2E5" firstAttribute="trailing" secondItem="ubP-KT-Tkj" secondAttribute="trailing" id="4a7-R0-5Ba"/>
+                            <constraint firstItem="iWD-r7-nLs" firstAttribute="trailing" secondItem="mtn-Us-2E5" secondAttribute="trailing" id="7MT-TL-Gfe"/>
+                            <constraint firstItem="ubP-KT-Tkj" firstAttribute="leading" secondItem="mtn-Us-2E5" secondAttribute="leading" id="CIH-mh-jvg"/>
+                            <constraint firstItem="iWD-r7-nLs" firstAttribute="top" secondItem="mtn-Us-2E5" secondAttribute="top" id="ZUy-fl-pcL"/>
+                            <constraint firstItem="iWD-r7-nLs" firstAttribute="height" secondItem="mtn-Us-2E5" secondAttribute="height" multiplier="0.1" id="iwB-k1-R7b"/>
+                            <constraint firstItem="iWD-r7-nLs" firstAttribute="leading" secondItem="mtn-Us-2E5" secondAttribute="leading" id="uZg-qd-f7u"/>
+                            <constraint firstItem="mtn-Us-2E5" firstAttribute="bottom" secondItem="ubP-KT-Tkj" secondAttribute="bottom" id="xoK-Sd-r4t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mtn-Us-2E5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="7 days" id="Ujf-I6-raA">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Thinn Khi" id="KYS-Km-pOA">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="position" id="owq-Vl-KKU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Flk-If-VlK" kind="presentation" identifier="SegueLocationsView" id="YUJ-07-fgL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="X9I-cJ-ADF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="rHB-9c-uPl" kind="presentation" identifier="SegueSettingsView" id="GDa-az-Eza"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="districtLabel" destination="KK8-Ia-ENS" id="mLn-xC-Okb"/>
+                        <outlet property="tableView" destination="ubP-KT-Tkj" id="Mz5-IM-Qhy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTn-fv-tSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2982" y="229"/>
+            <point key="canvasLocation" x="3921" y="418"/>
         </scene>
         <!--Thinn Khi-->
         <scene sceneID="smq-gC-50k">
             <objects>
-                <viewController id="3S7-z1-DfF" customClass="RootViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3S7-z1-DfF" customClass="DayInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vdc-qZ-qhC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyf-lX-Kq8" userLabel="Day Main Info Container View">
-                                <rect key="frame" x="0.0" y="88" width="375" height="491"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="348.5"/>
                                 <connections>
                                     <segue destination="luF-AX-sfK" kind="embed" identifier="SegueDayMainInfoView" id="QiP-7d-888"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-5h-tfU" userLabel="Day Hour info Container View">
-                                <rect key="frame" x="0.0" y="579" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="412.5" width="320" height="106.5"/>
                                 <connections>
                                     <segue destination="JT6-OB-4rO" kind="embed" identifier="SegueDayHoursInfoView" id="fuA-iz-7ct"/>
                                 </connections>
@@ -68,13 +136,13 @@
                         <viewLayoutGuide key="safeArea" id="XbT-rd-p0Y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Thinn Khi" id="MVT-pf-auP">
-                        <barButtonItem key="leftBarButtonItem" image="navigation-Position" id="Cl3-h2-U4a" userLabel="Location Button">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="position" id="Cl3-h2-U4a" userLabel="Location Button">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Flk-If-VlK" kind="presentation" identifier="SegueLocationsView" id="wCJ-0a-gsJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="navigation-Menu" id="yR8-SL-YVz" userLabel="Setting Button">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="yR8-SL-YVz" userLabel="Setting Button">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="rHB-9c-uPl" kind="presentation" identifier="SegueSettingsView" id="k7i-Cq-2N8"/>
@@ -92,7 +160,7 @@
                 <viewControllerPlaceholder storyboardName="LocationView" id="Flk-If-VlK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8u-44-DGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4778" y="-961"/>
+            <point key="canvasLocation" x="4469" y="-115"/>
         </scene>
         <!--SettingView-->
         <scene sceneID="q4I-Rn-9Nl">
@@ -100,7 +168,7 @@
                 <viewControllerPlaceholder storyboardName="SettingView" id="rHB-9c-uPl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2f-XB-s3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4776" y="-715"/>
+            <point key="canvasLocation" x="5046" y="-115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QMt-KG-xVv">
@@ -111,10 +179,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.94117647058823528" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="dbG-QO-zcm" kind="relationship" relationship="viewControllers" id="Akb-ig-qo7"/>
-                        <segue destination="s6E-XD-H1u" kind="relationship" relationship="viewControllers" id="4S5-fV-wGe"/>
+                        <segue destination="Xdc-VM-zfU" kind="relationship" relationship="viewControllers" id="4S5-fV-wGe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr6-4X-WYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,9 +207,13 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="15b-qK-j8U">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -149,105 +229,120 @@
             <objects>
                 <viewController id="luF-AX-sfK" customClass="DayMainInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5iA-tX-6OI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="491"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="348.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-Xp-VAv" userLabel="Weather Icon">
-                                <rect key="frame" x="112.66666666666669" y="76.666666666666671" width="150" height="147.33333333333331"/>
+                                <rect key="frame" x="96" y="52.5" width="128" height="104.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hO-3Y-SD7" userLabel="Temperture Range View">
-                                <rect key="frame" x="75" y="351.33333333333331" width="225" height="49"/>
+                                <rect key="frame" x="72" y="244" width="176" height="35"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperture_arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-DZ-Lgc" userLabel="temperture_arrowDown Image">
-                                        <rect key="frame" x="6" y="15.333333333333371" width="15" height="18"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-DZ-Lgc" userLabel="temperture_arrowDown Image">
+                                        <rect key="frame" x="4" y="0.5" width="21" height="35"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperture_arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-x5-65R" userLabel="temperture_arrowUp Image">
-                                        <rect key="frame" x="127.33333333333334" y="15.333333333333371" width="15" height="18"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.9 °F" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-2G-pWM" userLabel="Temperture High Label">
-                                        <rect key="frame" x="146.33333333333334" y="9.6666666666666838" width="78.666666666666657" height="29.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-yz-06S" userLabel="Temperture Low Label">
+                                        <rect key="frame" x="29" y="0.5" width="44" height="35"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.9 °F" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-yz-06S" userLabel="Temperture Low Label">
-                                        <rect key="frame" x="22.666666666666671" y="9.6666666666666838" width="78.666666666666671" height="29.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-2G-pWM" userLabel="Temperture High Label">
+                                        <rect key="frame" x="124" y="0.0" width="44" height="35"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-x5-65R" userLabel="temperture_arrowUp Image">
+                                        <rect key="frame" x="98.5" y="0.5" width="21" height="35"/>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="7LM-xP-0fV"/>
-                                    <constraint firstItem="8i0-x5-65R" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="1.2" id="9qt-uD-Rz0"/>
-                                    <constraint firstItem="dcb-yz-06S" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="BiF-di-7dv"/>
-                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="1.65" id="EFf-cJ-mMF"/>
-                                    <constraint firstItem="8i0-x5-65R" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="Id8-ye-hJG"/>
-                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="Owf-B2-csT"/>
-                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.35" id="P7x-W5-zbK"/>
-                                    <constraint firstItem="dcb-yz-06S" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="0.55" id="kma-ab-J29"/>
-                                    <constraint firstItem="dcb-yz-06S" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.35" id="uuh-5t-j6N"/>
-                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerX" secondItem="8hO-3Y-SD7" secondAttribute="centerX" multiplier="0.12" id="wsx-cI-fGg"/>
+                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="6fN-Fb-nv4"/>
+                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="leading" secondItem="8hO-3Y-SD7" secondAttribute="leading" constant="4" id="6pA-zg-7d7"/>
+                                    <constraint firstItem="8i0-x5-65R" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="7FS-Zs-inv"/>
+                                    <constraint firstItem="dcb-yz-06S" firstAttribute="height" secondItem="8hO-3Y-SD7" secondAttribute="height" id="AcH-h0-miu"/>
+                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="leading" secondItem="8i0-x5-65R" secondAttribute="trailing" constant="4" id="B9e-Bb-12M"/>
+                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.12" id="GeX-c6-fNx"/>
+                                    <constraint firstAttribute="trailing" secondItem="fgH-2G-pWM" secondAttribute="trailing" constant="8" id="Gpe-YY-wBD"/>
+                                    <constraint firstItem="dcb-yz-06S" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="MXx-KV-SSD"/>
+                                    <constraint firstItem="8i0-x5-65R" firstAttribute="height" secondItem="8hO-3Y-SD7" secondAttribute="height" id="OEp-My-mQD"/>
+                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="height" secondItem="8hO-3Y-SD7" secondAttribute="height" id="VWO-oE-qnH"/>
+                                    <constraint firstItem="8i0-x5-65R" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.12" id="Yof-lF-vln"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dcb-yz-06S" secondAttribute="trailing" constant="20" symbolic="YES" id="eTf-hA-dEY"/>
+                                    <constraint firstItem="dcb-yz-06S" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.25" id="iIQ-u3-25t"/>
+                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="width" secondItem="8hO-3Y-SD7" secondAttribute="width" multiplier="0.25" id="nmm-Qo-ZNW"/>
+                                    <constraint firstItem="Hb9-DZ-Lgc" firstAttribute="centerY" secondItem="8hO-3Y-SD7" secondAttribute="centerY" id="okD-sU-4fO"/>
+                                    <constraint firstItem="fgH-2G-pWM" firstAttribute="height" secondItem="8hO-3Y-SD7" secondAttribute="height" id="ptp-nq-aqI"/>
+                                    <constraint firstItem="dcb-yz-06S" firstAttribute="leading" secondItem="Hb9-DZ-Lgc" secondAttribute="trailing" constant="4" id="tXv-ul-KFC"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z8M-4D-Pyx">
-                                <rect key="frame" x="0.0" y="431" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="292.5" width="320" height="56"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-wf-dqP" userLabel="Line View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="9b4-Pn-aD9"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3C-km-h9I" userLabel="Features View">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="58"/>
+                                        <rect key="frame" x="0.0" y="1" width="320" height="54"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feature_humidity" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-Lm-0e2" userLabel="Humidity Icon">
-                                                <rect key="frame" x="26.666666666666671" y="19.666666666666686" width="14" height="18"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-Lm-0e2" userLabel="Humidity Icon">
+                                                <rect key="frame" x="13.5" y="13.5" width="31.5" height="27"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feature_precipitation" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-mS-8zg" userLabel="Precipitation Icon">
-                                                <rect key="frame" x="136.66666666666666" y="18.666666666666686" width="23" height="20"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="precipitation" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-mS-8zg" userLabel="Precipitation Icon">
+                                                <rect key="frame" x="121.5" y="13.5" width="25.5" height="27"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 %" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-1X-XkM" userLabel="Humidity Label">
-                                                <rect key="frame" x="53.333333333333343" y="18.666666666666686" width="35.666666666666657" height="20"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-1X-XkM" userLabel="Humidity Label">
+                                                <rect key="frame" x="40" y="17" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 %" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chc-Kd-gz4" userLabel="Precipitation Label">
-                                                <rect key="frame" x="171.66666666666666" y="18.666666666666686" width="33.333333333333343" height="19"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chc-Kd-gz4" userLabel="Precipitation Label">
+                                                <rect key="frame" x="148.5" y="17" width="39.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feature_anemometer" translatesAutoresizingMaskIntoConstraints="NO" id="qwT-Bg-WVf" userLabel="Wind Speed Icon">
-                                                <rect key="frame" x="258.66666666666669" y="18.666666666666686" width="24" height="20"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windSpeed" translatesAutoresizingMaskIntoConstraints="NO" id="qwT-Bg-WVf" userLabel="Wind Speed Icon">
+                                                <rect key="frame" x="217" y="13.5" width="28.5" height="27"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 KM/h" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0H-44-DmN" userLabel="Wind Speed Label">
-                                                <rect key="frame" x="293.33333333333331" y="18.666666666666686" width="51" height="19"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0H-44-DmN" userLabel="Wind Speed Label">
+                                                <rect key="frame" x="253" y="17" width="39.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="qwT-Bg-WVf" firstAttribute="height" secondItem="s3C-km-h9I" secondAttribute="height" multiplier="0.5" id="0Py-Jr-2fe"/>
                                             <constraint firstItem="BKX-1X-XkM" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="0.38" id="1C7-Or-MdX"/>
                                             <constraint firstItem="z3c-Lm-0e2" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="0.18" id="5OL-m7-Axx"/>
                                             <constraint firstItem="L0H-44-DmN" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="1.7" id="5SM-r9-63o"/>
                                             <constraint firstItem="L0H-44-DmN" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="8Rs-sc-vVA"/>
-                                            <constraint firstItem="6nj-mS-8zg" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="0.79" id="DCs-c9-FYO"/>
+                                            <constraint firstItem="z3c-Lm-0e2" firstAttribute="width" secondItem="s3C-km-h9I" secondAttribute="width" multiplier="0.1" id="9sU-Dr-SNE"/>
+                                            <constraint firstItem="6nj-mS-8zg" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="0.84" id="DCs-c9-FYO"/>
                                             <constraint firstItem="chc-Kd-gz4" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="HN8-57-kko"/>
                                             <constraint firstItem="qwT-Bg-WVf" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="1.44" id="KSJ-XT-JhX"/>
+                                            <constraint firstItem="6nj-mS-8zg" firstAttribute="width" secondItem="s3C-km-h9I" secondAttribute="width" multiplier="0.08" id="SYR-DO-7wQ"/>
                                             <constraint firstItem="qwT-Bg-WVf" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="XjR-4i-wVH"/>
                                             <constraint firstItem="z3c-Lm-0e2" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="eNn-mS-rWE"/>
-                                            <constraint firstItem="chc-Kd-gz4" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" id="fD5-is-mwy"/>
+                                            <constraint firstItem="6nj-mS-8zg" firstAttribute="height" secondItem="s3C-km-h9I" secondAttribute="height" multiplier="0.5" id="enx-Hf-2rq"/>
+                                            <constraint firstItem="chc-Kd-gz4" firstAttribute="centerX" secondItem="s3C-km-h9I" secondAttribute="centerX" multiplier="1.05" id="fD5-is-mwy"/>
                                             <constraint firstItem="6nj-mS-8zg" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="oRy-dJ-KpP"/>
                                             <constraint firstItem="BKX-1X-XkM" firstAttribute="centerY" secondItem="s3C-km-h9I" secondAttribute="centerY" id="tz0-n5-42U"/>
+                                            <constraint firstItem="qwT-Bg-WVf" firstAttribute="width" secondItem="s3C-km-h9I" secondAttribute="width" multiplier="0.09" id="yG9-Py-g9s"/>
+                                            <constraint firstItem="z3c-Lm-0e2" firstAttribute="height" secondItem="s3C-km-h9I" secondAttribute="height" multiplier="0.5" id="zCA-cn-aan"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vT-Br-Lau" userLabel="Line View">
-                                        <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="kw4-rd-U5y"/>
@@ -256,24 +351,25 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ci2-51-1Og" userLabel="District Label">
-                                <rect key="frame" x="131.33333333333334" y="25.666666666666671" width="112.33333333333334" height="49"/>
-                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="24"/>
+                                <rect key="frame" x="0.0" y="17.5" width="320" height="35"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ply-2p-Nyh" userLabel="Icon Summary Label">
-                                <rect key="frame" x="93.666666666666671" y="236" width="187.66666666666663" height="29.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ply-2p-Nyh" userLabel="Summary Label">
+                                <rect key="frame" x="0.0" y="159.5" width="320" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vhN-M0-B6F" userLabel="Temperture Label">
-                                <rect key="frame" x="122" y="296" width="131" height="49.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="69"/>
+                                <rect key="frame" x="104" y="205.5" width="112" height="35"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="69"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Z8M-4D-Pyx" secondAttribute="bottom" id="1ex-yJ-enT"/>
                             <constraint firstItem="nhj-Xp-VAv" firstAttribute="centerX" secondItem="SaG-0U-dGn" secondAttribute="centerX" id="6LS-hi-iVt"/>
@@ -282,9 +378,9 @@
                             <constraint firstItem="nhj-Xp-VAv" firstAttribute="height" secondItem="5iA-tX-6OI" secondAttribute="height" multiplier="0.3" id="EbL-U8-OLy"/>
                             <constraint firstItem="vhN-M0-B6F" firstAttribute="centerX" secondItem="SaG-0U-dGn" secondAttribute="centerX" id="G8M-Fz-dLR"/>
                             <constraint firstItem="Z8M-4D-Pyx" firstAttribute="centerY" secondItem="SaG-0U-dGn" secondAttribute="centerY" multiplier="1.84" id="I2Q-Qe-Eda"/>
-                            <constraint firstItem="Ply-2p-Nyh" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.5" id="JTr-Uv-Oac"/>
+                            <constraint firstItem="Ply-2p-Nyh" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" id="JTr-Uv-Oac"/>
                             <constraint firstItem="8hO-3Y-SD7" firstAttribute="centerX" secondItem="SaG-0U-dGn" secondAttribute="centerX" id="PA3-rt-LIa"/>
-                            <constraint firstItem="Ci2-51-1Og" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.3" id="RQt-dH-uhD"/>
+                            <constraint firstItem="Ci2-51-1Og" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" id="RQt-dH-uhD"/>
                             <constraint firstItem="nhj-Xp-VAv" firstAttribute="centerY" secondItem="SaG-0U-dGn" secondAttribute="centerY" multiplier="0.6" id="SPo-p0-EZ4"/>
                             <constraint firstItem="vhN-M0-B6F" firstAttribute="centerY" secondItem="SaG-0U-dGn" secondAttribute="centerY" multiplier="1.28" id="Vxe-Qb-rFc"/>
                             <constraint firstItem="Ci2-51-1Og" firstAttribute="centerY" secondItem="SaG-0U-dGn" secondAttribute="centerY" multiplier="0.2" id="a9Z-O0-96c"/>
@@ -292,7 +388,7 @@
                             <constraint firstItem="Ply-2p-Nyh" firstAttribute="centerY" secondItem="SaG-0U-dGn" secondAttribute="centerY" id="foL-Mz-Edm"/>
                             <constraint firstItem="vhN-M0-B6F" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.35" id="lxE-Sh-lHC"/>
                             <constraint firstItem="8hO-3Y-SD7" firstAttribute="height" secondItem="5iA-tX-6OI" secondAttribute="height" multiplier="0.1" id="nqY-QJ-Fl0"/>
-                            <constraint firstItem="8hO-3Y-SD7" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.6" id="rnc-Iv-Qbu"/>
+                            <constraint firstItem="8hO-3Y-SD7" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.55" id="rnc-Iv-Qbu"/>
                             <constraint firstItem="nhj-Xp-VAv" firstAttribute="width" secondItem="5iA-tX-6OI" secondAttribute="width" multiplier="0.4" id="thf-sn-PPh"/>
                             <constraint firstItem="Ci2-51-1Og" firstAttribute="height" secondItem="5iA-tX-6OI" secondAttribute="height" multiplier="0.1" id="wGA-mA-vel"/>
                             <constraint firstItem="vhN-M0-B6F" firstAttribute="height" secondItem="5iA-tX-6OI" secondAttribute="height" multiplier="0.1" id="x8o-7V-OWc"/>
@@ -316,33 +412,135 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9M-nq-GHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3919" y="-78"/>
+            <point key="canvasLocation" x="4950" y="-850"/>
         </scene>
         <!--Day Hours Info View Controller-->
         <scene sceneID="iFR-WT-qnn">
             <objects>
                 <viewController id="JT6-OB-4rO" customClass="DayHoursInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TvB-Cy-6LS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="106.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yiv-zh-u0r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="106.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eoa-w8-nXd">
+                                    <size key="itemSize" width="56" height="118"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherHourCell" id="qEU-eu-8Xw" customClass="HourInfoCollectionViewCell" customModule="ThinnKhi" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="-6" width="56" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="56" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-h7-WzR" userLabel="Time label">
+                                                    <rect key="frame" x="1.5" y="12" width="53" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-KI-6y3" userLabel="Temperature Label">
+                                                    <rect key="frame" x="8.5" y="47.5" width="39" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fe7-Vr-9pK" userLabel="Temperature Icon">
+                                                    <rect key="frame" x="7.5" y="71" width="42" height="35.5"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Fe7-Vr-9pK" firstAttribute="height" secondItem="qEU-eu-8Xw" secondAttribute="height" multiplier="0.3" id="3Pa-mE-paC"/>
+                                            <constraint firstItem="aDR-KI-6y3" firstAttribute="width" secondItem="qEU-eu-8Xw" secondAttribute="width" multiplier="0.7" id="4ww-U0-0T1"/>
+                                            <constraint firstItem="fJa-h7-WzR" firstAttribute="centerY" secondItem="qEU-eu-8Xw" secondAttribute="centerY" multiplier="0.4" id="D4f-Y0-Qx9"/>
+                                            <constraint firstItem="aDR-KI-6y3" firstAttribute="centerY" secondItem="qEU-eu-8Xw" secondAttribute="centerY" multiplier="0.95" id="DW1-D1-hL2"/>
+                                            <constraint firstItem="fJa-h7-WzR" firstAttribute="centerX" secondItem="qEU-eu-8Xw" secondAttribute="centerX" id="KIk-zG-MSj"/>
+                                            <constraint firstItem="Fe7-Vr-9pK" firstAttribute="centerY" secondItem="qEU-eu-8Xw" secondAttribute="centerY" multiplier="1.5" id="NSq-Vp-dMu"/>
+                                            <constraint firstItem="Fe7-Vr-9pK" firstAttribute="width" secondItem="qEU-eu-8Xw" secondAttribute="width" multiplier="0.75" id="PBT-jQ-AaA"/>
+                                            <constraint firstItem="aDR-KI-6y3" firstAttribute="centerX" secondItem="qEU-eu-8Xw" secondAttribute="centerX" id="dnr-fK-6LP"/>
+                                            <constraint firstItem="aDR-KI-6y3" firstAttribute="height" secondItem="qEU-eu-8Xw" secondAttribute="height" multiplier="0.15" id="hsK-6a-3sI"/>
+                                            <constraint firstItem="Fe7-Vr-9pK" firstAttribute="centerX" secondItem="qEU-eu-8Xw" secondAttribute="centerX" id="j40-77-YVD"/>
+                                            <constraint firstItem="fJa-h7-WzR" firstAttribute="height" secondItem="qEU-eu-8Xw" secondAttribute="height" multiplier="0.2" id="krg-73-uH6"/>
+                                            <constraint firstItem="fJa-h7-WzR" firstAttribute="width" secondItem="qEU-eu-8Xw" secondAttribute="width" multiplier="0.95" id="zZ1-xb-OGt"/>
+                                        </constraints>
+                                        <size key="customSize" width="56" height="118"/>
+                                        <connections>
+                                            <outlet property="temperatureLabel" destination="aDR-KI-6y3" id="HZa-YC-VBD"/>
+                                            <outlet property="timeLabel" destination="fJa-h7-WzR" id="STJ-bi-G6S"/>
+                                            <outlet property="weatherIcon" destination="Fe7-Vr-9pK" id="HrA-oq-hsv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JT6-OB-4rO" id="6Ab-eq-KjV"/>
+                                    <outlet property="delegate" destination="JT6-OB-4rO" id="QQn-XY-hlK"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yiv-zh-u0r" firstAttribute="leading" secondItem="TvB-Cy-6LS" secondAttribute="leading" id="OLj-AD-GY3"/>
+                            <constraint firstItem="yiv-zh-u0r" firstAttribute="top" secondItem="TvB-Cy-6LS" secondAttribute="top" id="gVn-5o-Nez"/>
+                            <constraint firstAttribute="bottom" secondItem="yiv-zh-u0r" secondAttribute="bottom" id="olM-Qa-aFt"/>
+                            <constraint firstAttribute="trailing" secondItem="yiv-zh-u0r" secondAttribute="trailing" id="qSx-rk-6ou"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZ0-NJ-x3q"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="yiv-zh-u0r" id="46f-He-NXS"/>
                         <outlet property="weatherDataContainer" destination="TvB-Cy-6LS" id="NoG-L7-Ekj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OE4-8I-yfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4697" y="-205"/>
+            <point key="canvasLocation" x="4950" y="-491"/>
+        </scene>
+        <!--7 days-->
+        <scene sceneID="Kf0-ze-2lA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xdc-VM-zfU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="7 days" id="Ujf-I6-raA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VbH-og-67Y">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s6E-XD-H1u" kind="relationship" relationship="rootViewController" id="gIh-ok-nx7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdN-MY-nTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2981" y="419"/>
         </scene>
     </scenes>
     <resources>
-        <image name="feature_anemometer" width="24" height="20"/>
-        <image name="feature_humidity" width="14" height="18"/>
-        <image name="feature_precipitation" width="23" height="20"/>
-        <image name="navigation-Menu" width="25" height="20"/>
-        <image name="navigation-Position" width="28" height="28"/>
-        <image name="temperture_arrowDown" width="15" height="18"/>
-        <image name="temperture_arrowUp" width="15" height="18"/>
+        <image name="arrowDown" width="40" height="40"/>
+        <image name="arrowUp" width="40" height="40"/>
+        <image name="humidity" width="40" height="40"/>
+        <image name="location" width="29" height="29"/>
+        <image name="menu" width="29" height="29"/>
+        <image name="morefavorite" width="29" height="29"/>
+        <image name="position" width="29" height="29"/>
+        <image name="precipitation" width="40" height="40"/>
+        <image name="windSpeed" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GDa-az-Eza"/>
+        <segue reference="YUJ-07-fgL"/>
+    </inferredMetricsTieBreakers>
 </document>

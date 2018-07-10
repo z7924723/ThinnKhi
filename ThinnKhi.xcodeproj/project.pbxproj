@@ -23,6 +23,7 @@
 		701698EB20EC713500DE7924 /* WeekInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701698E920EC713500DE7924 /* WeekInfoTableViewCell.xib */; };
 		701698ED20EC9B8F00DE7924 /* WeekInfoTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */; };
 		701698EF20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */; };
+		701698F420EDED6900DE7924 /* DayDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698F320EDED6900DE7924 /* DayDataViewModel.swift */; };
 		7053DB0020EB2815009058C4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053DAFF20EB2815009058C4 /* Notification.swift */; };
 		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */; };
@@ -61,6 +62,7 @@
 		701698E920EC713500DE7924 /* WeekInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekInfoTableViewCell.xib; sourceTree = "<group>"; };
 		701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekInfoTableViewSectionHeader.xib; sourceTree = "<group>"; };
+		701698F320EDED6900DE7924 /* DayDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDataViewModel.swift; sourceTree = "<group>"; };
 		7053DAFF20EB2815009058C4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewViewModel.swift; sourceTree = "<group>"; };
@@ -111,13 +113,13 @@
 		700BA4E620E006AC005B3EEA /* ThinnKhi */ = {
 			isa = PBXGroup;
 			children = (
-				70D47D7A20E2149C00B72554 /* Models */,
-				70D47D7720E213AB00B72554 /* Manager */,
-				70D47D7420E20F6000B72554 /* Configuration */,
 				700BA4E720E006AC005B3EEA /* AppDelegate.swift */,
+				70D47D7420E20F6000B72554 /* Configuration */,
 				700BA50C20E034BB005B3EEA /* Extensions */,
 				700BA4F920E00873005B3EEA /* Font */,
 				700BA4F320E006AD005B3EEA /* Info.plist */,
+				70D47D7720E213AB00B72554 /* Manager */,
+				70D47D7A20E2149C00B72554 /* Models */,
 				70D47D6620E0E50D00B72554 /* StoryBoards */,
 				700BA50020E00AE1005B3EEA /* View Controllers */,
 			);
@@ -175,6 +177,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		701698F020ECB68E00DE7924 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				701698F320EDED6900DE7924 /* DayDataViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		70C4269E20EBCD4900B61D05 /* Daily Infomation */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 			children = (
 				700BA50220E00C7F005B3EEA /* WeekInfoViewController.swift */,
 				70C426A020EBCDA500B61D05 /* TableView Cell */,
+				701698F020ECB68E00DE7924 /* View Model */,
 			);
 			path = "Week Info View Controller";
 			sourceTree = "<group>";
@@ -373,6 +384,7 @@
 				70D47D6920E1D59500B72554 /* HourInfoCollectionViewCell.swift in Sources */,
 				708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */,
 				70D47D7920E213B700B72554 /* DataManager.swift in Sources */,
+				701698F420EDED6900DE7924 /* DayDataViewModel.swift in Sources */,
 				70D47D7C20E214BE00B72554 /* WeatherData.swift in Sources */,
 				70D47D7F20E22D6700B72554 /* DayMainInfoViewViewModel.swift in Sources */,
 				70D47D8120E2340B00B72554 /* UserDefaults.swift in Sources */,

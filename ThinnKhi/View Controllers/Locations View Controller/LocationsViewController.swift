@@ -8,6 +8,10 @@
 
 import UIKit
 
-class LocationsViewController: UIViewController {
+class LocationsViewController: ViewSettingViewController {
   
+  // Mark: - View Life Cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 }

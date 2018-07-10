@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class DayInfoViewController: UIViewController {
+class DayInfoViewController: ViewSettingViewController {
   
   // MARK: - Segues
   private enum Segue {
@@ -57,18 +57,10 @@ class DayInfoViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setupBackground()
     setupTabBar()
 
     setupNotificationHandling()
     
-  }
-  
-  // MARK: - View Methods
-  private func setupBackground() {
-    let backgroundLayer = CAGradientLayer().thinnKhiBackgroundColor()
-    backgroundLayer.frame = self.view.bounds
-    self.view.layer.insertSublayer(backgroundLayer, at: 0)
   }
   
   private func setupTabBar() {

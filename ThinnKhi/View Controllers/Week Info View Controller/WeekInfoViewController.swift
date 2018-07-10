@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class WeekInfoViewController: UIViewController {
+class WeekInfoViewController: ViewSettingViewController {
   
   // MARK: - Interface Builder Properties
   @IBOutlet weak var tableView: UITableView!
@@ -40,10 +40,6 @@ class WeekInfoViewController: UIViewController {
     configViewModel()
     
     districtLabel.text = placemark?.locality
-    
-    let backgroundLayer = CAGradientLayer().thinnKhiBackgroundColor()
-    backgroundLayer.frame = self.view.bounds
-    self.view.layer.insertSublayer(backgroundLayer, at: 0)
     
   }
   

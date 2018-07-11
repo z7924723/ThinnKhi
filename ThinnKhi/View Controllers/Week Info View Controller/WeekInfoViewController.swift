@@ -149,23 +149,18 @@ extension WeekInfoViewController: HeaderViewDelegate {
   
   func toggleSection(header: WeekInfoTableViewSectionHeader, section: Int) {
 
-    if let headerData = viewModel?[section] {
-      if headerData.isCollapsible {
-        
-        // Toggle collapse
-        let collapsed = !(headerData.isCollapsed)
-        headerData.isCollapsed = collapsed
-        
-        self.tableView.beginUpdates()
-        self.tableView.reloadSections([section], with: .fade)
-        self.tableView.endUpdates()
-        
-        if headerData.isCollapsed == false {
-          let indexPath = IndexPath(row: tableView.numberOfRows(inSection: section) - 1, section: section)
-          self.tableView.scrollToRow(at: indexPath , at: .top, animated: true)
-        }
+    for index in 0...(viewModel?.count)! - 1 {
+      if index == section {
+        viewModel![index].isCollapsed = false
+      } else {
+        viewModel![index].isCollapsed = true
       }
     }
+    
+    self.tableView.reloadData()
+    
+    let indexPath = IndexPath(row: tableView.numberOfRows(inSection: section) - 1, section: section)
+    self.tableView.scrollToRow(at: indexPath , at: .top, animated: true)
   }
   
 }

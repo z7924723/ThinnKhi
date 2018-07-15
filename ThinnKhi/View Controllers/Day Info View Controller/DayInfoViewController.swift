@@ -16,7 +16,7 @@ class DayInfoViewController: ViewSettingViewController {
     static let segueDayMainInfoView = "SegueDayMainInfoView"
     static let SegueDayHoursInfoView = "SegueDayHoursInfoView"
 //    static let SegueSettingsView = "SegueSettingsView"
-//    static let segueLocationsView = "SegueLocationsView"
+    static let segueLocationsView = "SegueLocationsView"
   }
   
   // MARK: - Properties
@@ -90,6 +90,19 @@ class DayInfoViewController: ViewSettingViewController {
       
       self.dayHoursInfoViewController = destination
 
+    case Segue.segueLocationsView:
+      guard let navigationController = segue.destination as? UINavigationController else {
+        fatalError("Unexpected Destination View Controller")
+      }
+      
+      guard let destination = navigationController.topViewController as? LocationsViewController else {
+        fatalError("Unexpected Destination View Controller")
+      }
+
+      destination.currentLocation = currentLocation
+      destination.currentLocality = placemark?.locality
+      destination.delegate = self
+      
     default:
       break
     }
@@ -199,4 +212,13 @@ extension DayInfoViewController: CLLocationManagerDelegate {
       currentLocation = CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude)
     }
   }
+}
+
+extension DayInfoViewController: LocationsViewControllerDelegate {
+  
+  func controller(_ controller: LocationsViewController, didSelectLocation location: CLLocation) {
+    // Update Current Location
+    currentLocation = location
+  }
+  
 }

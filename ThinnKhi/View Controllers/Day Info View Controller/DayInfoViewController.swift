@@ -107,11 +107,6 @@ class DayInfoViewController: ViewSettingViewController {
       break
     }
   }
-    
-  // MARK: - Unwind Actions
-  @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
-    
-  }
   
   // MARK: - Notification Handling
   @objc func applicationDidBecomeActive(_ notification: Notification) {

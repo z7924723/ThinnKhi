@@ -88,13 +88,13 @@ struct DayMainInfoViewViewModel {
       guard type == TemperatureType.otherTemerature else {
         return String(format: "%.1f°F", temperature)
       }
-      return String(format: "%.1f°C", temperature)
+      return String(format: "%.1f°", temperature)
       
     default:
       guard type == TemperatureType.otherTemerature else {
-        return String(format: "%.1f°F", temperature)
+        return String(format: "%.1f°C", temperature)
       }
-      return String(format: "%.1f°C", temperature.toCelcius())
+      return String(format: "%.1f°", temperature.toCelcius())
     }
   }
 

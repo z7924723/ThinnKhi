@@ -37,10 +37,18 @@ class WeekInfoViewController: ViewSettingViewController {
 
     registerTableViewCell()
 
+//    configViewModel()
+    
+//    districtLabel.text = placemark?.locality
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+
     configViewModel()
     
     districtLabel.text = placemark?.locality
-    
+
   }
   
   // MARK: - Helper
@@ -89,6 +97,7 @@ class WeekInfoViewController: ViewSettingViewController {
 }
 
 extension WeekInfoViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WeekInfoTableViewSectionHeader") as! WeekInfoTableViewSectionHeader
 
@@ -143,6 +152,7 @@ extension WeekInfoViewController: UITableViewDataSource {
     
     return cell
   }
+  
 }
 
 extension WeekInfoViewController: HeaderViewDelegate {

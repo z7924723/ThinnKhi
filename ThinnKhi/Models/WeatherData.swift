@@ -31,7 +31,7 @@ struct Daily: Codable {
 }
 
 struct DayData: Codable {
-  let time: Date
+  let time: Double
   let icon: String
   let summary: String
   let temperatureHigh: Double

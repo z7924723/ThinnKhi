@@ -23,15 +23,17 @@ class DayDataViewModel {
   private let dateFormatter = DateFormatter()
   
   var day: String {
+    let date = Date(timeIntervalSince1970: dayData.time)
     dayFormatter.dateFormat = "EEE"
     
-    return dayFormatter.string(from: dayData.time)
+    return dayFormatter.string(from: date)
   }
   
   var date: String {
+    let date = Date(timeIntervalSince1970: dayData.time)
     dateFormatter.dateFormat = "MM/dd"
     
-    return dateFormatter.string(from: dayData.time)
+    return dateFormatter.string(from: date)
   }
   
   var summary: String {

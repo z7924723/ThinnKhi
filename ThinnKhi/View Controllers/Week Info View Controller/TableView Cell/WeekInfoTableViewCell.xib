@@ -59,13 +59,6 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-tX-ICj" userLabel="Separator Line View">
-                        <rect key="frame" x="0.0" y="98" width="420" height="1"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="KWJ-wE-iSX"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -73,17 +66,14 @@
                     <constraint firstItem="Fif-IF-0eY" firstAttribute="leading" secondItem="e2o-ax-n2B" secondAttribute="trailing" constant="8" id="9Pg-Fd-Aez"/>
                     <constraint firstItem="AID-Kb-bH3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="9iD-rG-2c1"/>
                     <constraint firstItem="9zc-Pl-oJq" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="A1M-Mk-H5W"/>
-                    <constraint firstItem="NQO-tX-ICj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GFY-4A-MjT"/>
                     <constraint firstItem="8Q9-tp-1CT" firstAttribute="leading" secondItem="AID-Kb-bH3" secondAttribute="trailing" constant="8" id="Iwy-rC-nkj"/>
                     <constraint firstAttribute="bottom" secondItem="e2o-ax-n2B" secondAttribute="bottom" constant="4" id="Jka-z3-GHE"/>
                     <constraint firstItem="e2o-ax-n2B" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="K7p-CU-r0w"/>
-                    <constraint firstAttribute="trailing" secondItem="NQO-tX-ICj" secondAttribute="trailing" id="L7o-od-gew"/>
                     <constraint firstItem="9zc-Pl-oJq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.82" id="M3k-2I-UvZ"/>
                     <constraint firstItem="9zc-Pl-oJq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="MMW-au-gqb"/>
                     <constraint firstItem="ZBP-tz-zf1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.11" id="PrS-Qn-jXV"/>
                     <constraint firstItem="AID-Kb-bH3" firstAttribute="top" secondItem="NoG-5x-Wzx" secondAttribute="bottom" constant="8" id="Tst-Vt-1s5"/>
                     <constraint firstItem="e2o-ax-n2B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="TtY-hN-XGe"/>
-                    <constraint firstAttribute="bottom" secondItem="NQO-tX-ICj" secondAttribute="bottom" id="YCJ-Wz-KvP"/>
                     <constraint firstItem="Fif-IF-0eY" firstAttribute="centerY" secondItem="e2o-ax-n2B" secondAttribute="centerY" id="aiA-bb-P04"/>
                     <constraint firstItem="ZBP-tz-zf1" firstAttribute="centerY" secondItem="9zc-Pl-oJq" secondAttribute="centerY" id="ckN-Qv-qOw"/>
                     <constraint firstItem="NoG-5x-Wzx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cqt-VC-8Bt"/>
@@ -97,7 +87,6 @@
                     <constraint firstItem="e2o-ax-n2B" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="uU9-nw-giq"/>
                     <constraint firstItem="AID-Kb-bH3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.42" id="wNa-5p-4tQ"/>
                     <constraint firstItem="NoG-5x-Wzx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wzi-kk-N3c"/>
-                    <constraint firstItem="NQO-tX-ICj" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="zbF-u7-cbo"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -153,6 +153,12 @@ extension WeekInfoViewController: UITableViewDataSource {
     return cell
   }
   
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    cell.transform = CGAffineTransform(scaleX: 1, y: 0)
+    UIView.animate(withDuration: 0.5) {
+      cell.transform = CGAffineTransform.identity
+    }
+  }
 }
 
 extension WeekInfoViewController: HeaderViewDelegate {

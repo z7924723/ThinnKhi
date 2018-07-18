@@ -12,6 +12,7 @@ struct DayHoursInfoViewViewModel {
   
   // MARK: - Properties
   let weatherData: Hourly
+  let timeZone: String
   
   var numberOfSection: Int {
     return 1
@@ -22,7 +23,7 @@ struct DayHoursInfoViewViewModel {
   }
   
   func viewModel(for index: Int) -> HourlyDataViewViewModel {
-    return HourlyDataViewViewModel(hourData: weatherData.data[index])
+    return HourlyDataViewViewModel(hourData: weatherData.data[index], timeZone: timeZone)
   }
 
 }

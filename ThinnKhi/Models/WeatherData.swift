@@ -11,6 +11,7 @@ import Foundation
 struct WeatherData: Codable {
   let latitude: Double
   let longitude: Double
+  let timezone: String
   let currently: Currently
   let daily: Daily
   let hourly: Hourly

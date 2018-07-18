@@ -162,7 +162,7 @@ class DayInfoViewController: ViewSettingViewController {
         
         self.dayMainInfoViewController.viewModel = DayMainInfoViewViewModel(weatherData: weatherData, coordinateInfo: self.placemark!)
 
-        self.dayHoursInfoViewController.viewModel = DayHoursInfoViewViewModel(weatherData: weatherData.hourly)
+        self.dayHoursInfoViewController.viewModel = DayHoursInfoViewViewModel(weatherData: weatherData.hourly, timeZone: weatherData.timezone)
         
       }
     }

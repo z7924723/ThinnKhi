@@ -12,12 +12,15 @@ struct HourlyDataViewViewModel {
   
   // MARK: - Properties
   let hourData: HourData
+  let timeZone: String
   
   // MARK: -
   private let hourFormatter = DateFormatter()
   
   var time: String {
     hourFormatter.dateFormat = UserDefaults.timeNotation().timeFormat
+    hourFormatter.timeZone = TimeZone(identifier: timeZone)
+    
     return hourFormatter.string(from: hourData.time)
   }
   

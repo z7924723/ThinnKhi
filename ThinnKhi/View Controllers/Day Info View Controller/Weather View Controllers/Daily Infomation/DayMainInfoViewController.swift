@@ -35,6 +35,11 @@ class DayMainInfoViewController: WeatherViewController {
     // Do any additional setup after loading the view, typically from a nib.
     
   }
+  
+  // MARK: - Public Interface
+  func reloadData() {
+    updateView()
+  }
 
   // MARK: - View Methods
   private func updateView() {

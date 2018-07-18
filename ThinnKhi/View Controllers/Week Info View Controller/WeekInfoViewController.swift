@@ -36,22 +36,41 @@ class WeekInfoViewController: ViewSettingViewController {
     super.viewDidLoad()
 
     registerTableViewCell()
-
-//    configViewModel()
-    
-//    districtLabel.text = placemark?.locality
-    
   }
   
   override func viewWillAppear(_ animated: Bool) {
-
     configViewModel()
     
     districtLabel.text = placemark?.locality
 
+    configNavigationBarItem()
+  }
+  
+  // MARK: - Actions
+  @IBAction func temperatureNotation(_ sender: Any) {
+    if UserDefaults.temperatureNotation() == TemperatureNotation.celsius {
+      UserDefaults.setTemperatureNotation(temperatureNotation: .fahrenheit)
+      self.navigationItem.rightBarButtonItem?.title = "°C"
+    } else {
+      UserDefaults.setTemperatureNotation(temperatureNotation: .celsius)
+      self.navigationItem.rightBarButtonItem?.title = "°F"
+    }
+    
+    tableView.reloadData()
   }
   
   // MARK: - Helper
+  private func configNavigationBarItem() {
+    if UserDefaults.temperatureNotation() == TemperatureNotation.celsius {
+      self.navigationItem.rightBarButtonItem?.title = "°F"
+    } else {
+      self.navigationItem.rightBarButtonItem?.title = "°C"
+    }
+  self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Roboto-Medium", size: 25)!], for: .normal)
+    
+    tableView.reloadData()
+  }
+  
   private func configViewModel() {
     viewModel = [DayDataViewModel]()
 

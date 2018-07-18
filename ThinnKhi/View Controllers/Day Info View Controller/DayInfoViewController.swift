@@ -15,7 +15,6 @@ class DayInfoViewController: ViewSettingViewController {
   private enum Segue {
     static let segueDayMainInfoView = "SegueDayMainInfoView"
     static let SegueDayHoursInfoView = "SegueDayHoursInfoView"
-//    static let SegueSettingsView = "SegueSettingsView"
     static let segueLocationsView = "SegueLocationsView"
   }
   
@@ -60,15 +59,12 @@ class DayInfoViewController: ViewSettingViewController {
     setupTabBar()
 
     setupNotificationHandling()
-    
   }
   
-  private func setupTabBar() {
-    let tabBar = self.tabBarController!.tabBar
-    let tabButtonLineColors = #colorLiteral(red: 0.9411764706, green: 0.1019607843, blue: 0.1882352941, alpha: 1)
-    tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: tabButtonLineColors, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 2.0)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
-    tabBar.isUserInteractionEnabled = false
+    configNavigationBarItem()
   }
   
   // MARK: - Navigation
@@ -108,12 +104,50 @@ class DayInfoViewController: ViewSettingViewController {
     }
   }
   
+  // MARK: - Actions
+  @IBAction func temperatureNotation(_ sender: Any) {
+    if UserDefaults.temperatureNotation() == TemperatureNotation.celsius {
+      UserDefaults.setTemperatureNotation(temperatureNotation: .fahrenheit)
+      self.navigationItem.rightBarButtonItem?.title = "°C"
+    } else {
+      UserDefaults.setTemperatureNotation(temperatureNotation: .celsius)
+      self.navigationItem.rightBarButtonItem?.title = "°F"
+    }
+    
+    dayMainInfoViewController.reloadData()
+    dayHoursInfoViewController.reloadData()
+  }
+  
+  @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
+    
+  }
+
   // MARK: - Notification Handling
   @objc func applicationDidBecomeActive(_ notification: Notification) {
     requestLocation()
   }
   
   // MARK: - Helper Methods
+  private func configNavigationBarItem() {
+    if UserDefaults.temperatureNotation() == TemperatureNotation.celsius {
+      self.navigationItem.rightBarButtonItem?.title = "°F"
+    } else {
+      self.navigationItem.rightBarButtonItem?.title = "°C"
+    }
+    self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Roboto-Medium", size: 25)!], for: .normal)
+    
+    dayMainInfoViewController.reloadData()
+    dayHoursInfoViewController.reloadData()
+  }
+  
+  private func setupTabBar() {
+    let tabBar = self.tabBarController!.tabBar
+    let tabButtonLineColors = #colorLiteral(red: 0.9411764706, green: 0.1019607843, blue: 0.1882352941, alpha: 1)
+    tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: tabButtonLineColors, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 2.0)
+    
+    tabBar.isUserInteractionEnabled = false
+  }
+  
   private func fetchWeatherData() {
     guard let location = currentLocation else { return }
     

@@ -25,6 +25,11 @@ class DayHoursInfoViewController: WeatherViewController {
     super.viewDidLoad()
   }
   
+  // MARK: - Public Interface
+  func reloadData() {
+    updateView()
+  }
+
   // MARK: - View Methods
   private func updateView() {
     if let _ = viewModel {

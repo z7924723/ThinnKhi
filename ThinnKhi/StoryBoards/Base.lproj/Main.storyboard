@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Thinn Khi-->
+        <!--Week Info View Controller-->
         <scene sceneID="3X7-Wo-oSh">
             <objects>
                 <viewController storyboardIdentifier="SevenDaysInfo" id="s6E-XD-H1u" customClass="WeekInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,23 +36,16 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW7-Kb-100">
-                                        <rect key="frame" x="288" y="9" width="32" height="29"/>
-                                        <state key="normal" image="morefavorite"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.29803921568627451" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="KK8-Ia-ENS" firstAttribute="height" secondItem="iWD-r7-nLs" secondAttribute="height" multiplier="0.5" id="2xl-Ii-7vO"/>
                                     <constraint firstItem="KK8-Ia-ENS" firstAttribute="width" secondItem="iWD-r7-nLs" secondAttribute="width" multiplier="0.7" id="5UK-Dy-bqY"/>
-                                    <constraint firstItem="kW7-Kb-100" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="8ah-Fu-DQY"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KK8-Ia-ENS" secondAttribute="trailing" constant="20" symbolic="YES" id="RB8-SB-onZ"/>
                                     <constraint firstItem="rkA-46-q7e" firstAttribute="centerX" secondItem="iWD-r7-nLs" secondAttribute="centerX" multiplier="0.12" id="REN-Lg-hDv"/>
                                     <constraint firstItem="KK8-Ia-ENS" firstAttribute="leading" secondItem="rkA-46-q7e" secondAttribute="trailing" constant="8" id="X8E-GB-36t"/>
                                     <constraint firstItem="rkA-46-q7e" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="bzm-zt-tos"/>
                                     <constraint firstItem="KK8-Ia-ENS" firstAttribute="centerY" secondItem="iWD-r7-nLs" secondAttribute="centerY" id="g4R-Ju-t8T"/>
-                                    <constraint firstItem="kW7-Kb-100" firstAttribute="width" secondItem="iWD-r7-nLs" secondAttribute="width" multiplier="0.1" id="nkV-aM-R79"/>
-                                    <constraint firstItem="kW7-Kb-100" firstAttribute="centerX" secondItem="iWD-r7-nLs" secondAttribute="centerX" multiplier="1.9" id="sDY-Cv-DtO"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-KT-Tkj">
@@ -79,17 +72,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mtn-Us-2E5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Thinn Khi" id="KYS-Km-pOA">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="position" id="owq-Vl-KKU">
+                    <navigationItem key="navigationItem" id="KYS-Km-pOA">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Pcj-sz-BUN" userLabel="Title View">
+                            <rect key="frame" x="110" y="7" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navigationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GX9-WY-h2l">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="3th-a3-y4B">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Flk-If-VlK" kind="presentation" identifier="SegueLocationsView" id="YUJ-07-fgL"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="menu" id="X9I-cJ-ADF">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="rHB-9c-uPl" kind="presentation" identifier="SegueSettingsView" id="GDa-az-Eza"/>
+                                <action selector="temperatureNotation:" destination="s6E-XD-H1u" id="diE-C5-7vl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="3921" y="418"/>
         </scene>
-        <!--Thinn Khi-->
+        <!--Day Info View Controller-->
         <scene sceneID="smq-gC-50k">
             <objects>
                 <viewController id="3S7-z1-DfF" customClass="DayInfoViewController" customModule="ThinnKhi" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,24 +134,37 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XbT-rd-p0Y"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Thinn Khi" id="MVT-pf-auP">
+                    <navigationItem key="navigationItem" id="MVT-pf-auP">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="position" id="Cl3-h2-U4a" userLabel="Location Button">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Flk-If-VlK" kind="presentation" identifier="SegueLocationsView" id="wCJ-0a-gsJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="menu" id="yR8-SL-YVz" userLabel="Setting Button">
+                        <view key="titleView" contentMode="scaleToFill" id="zzd-Ec-XON">
+                            <rect key="frame" x="110" y="7" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navigationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-a1-2Gw">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="yR8-SL-YVz" userLabel="Setting Button">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="rHB-9c-uPl" kind="presentation" identifier="SegueSettingsView" id="k7i-Cq-2N8"/>
+                                <action selector="temperatureNotation:" destination="3S7-z1-DfF" id="4rs-RY-vFH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLO-zN-g6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3920.8000000000002" y="-733.74384236453204"/>
+            <point key="canvasLocation" x="3920.625" y="-734.15492957746483"/>
         </scene>
         <!--LocationView-->
         <scene sceneID="TBg-W6-bFz">
@@ -162,14 +174,6 @@
             </objects>
             <point key="canvasLocation" x="4469" y="-115"/>
         </scene>
-        <!--SettingView-->
-        <scene sceneID="q4I-Rn-9Nl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SettingView" id="rHB-9c-uPl" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X2f-XB-s3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5046" y="-115"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QMt-KG-xVv">
             <objects>
@@ -178,13 +182,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509803921567" green="0.098039215686274508" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.94117647058823528" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.44313725490196076" green="0.8666666666666667" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -202,14 +206,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dbG-QO-zcm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Today" id="7GC-wX-rdV">
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="18" maxX="0.0" maxY="-16"/>
+                        <inset key="largeContentSizeImageInsets" minX="1" minY="18" maxX="0.0" maxY="-39"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="15b-qK-j8U">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509803921567" green="0.098039215686274508" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,13 +510,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xdc-VM-zfU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="7 days" id="Ujf-I6-raA">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="1" maxY="1"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VbH-og-67Y">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.18823529411764706" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509803921567" green="0.098039215686274508" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -533,14 +538,9 @@
         <image name="arrowUp" width="40" height="40"/>
         <image name="humidity" width="40" height="40"/>
         <image name="location" width="29" height="29"/>
-        <image name="menu" width="29" height="29"/>
-        <image name="morefavorite" width="29" height="29"/>
+        <image name="navigationIcon" width="1189" height="213"/>
         <image name="position" width="29" height="29"/>
         <image name="precipitation" width="40" height="40"/>
         <image name="windSpeed" width="40" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GDa-az-Eza"/>
-        <segue reference="YUJ-07-fgL"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -194,6 +194,7 @@ extension WeekInfoViewController: HeaderViewDelegate {
     
     self.tableView.reloadData()
     
+    // scroll to specific row
     let indexPath = IndexPath(row: tableView.numberOfRows(inSection: section) - 1, section: section)
     self.tableView.scrollToRow(at: indexPath , at: .top, animated: true)
   }

@@ -155,6 +155,8 @@ class DayInfoViewController: ViewSettingViewController {
     let latitude = location.coordinate.latitude
     let longitude = location.coordinate.longitude
     
+    print("\(latitude), \(longitude)")
+    
     dataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (weatherData, error) in
       if let error = error {
         print(error)

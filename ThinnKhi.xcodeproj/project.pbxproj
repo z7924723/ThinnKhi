@@ -11,7 +11,6 @@
 		700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E720E006AC005B3EEA /* AppDelegate.swift */; };
 		700BA4EA20E006AC005B3EEA /* DayMainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */; };
 		700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4EB20E006AC005B3EEA /* Main.storyboard */; };
-		700BA4F220E006AD005B3EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4F020E006AD005B3EEA /* LaunchScreen.storyboard */; };
 		700BA4FD20E0088E005B3EEA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */; };
 		700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FB20E0088E005B3EEA /* Roboto-Regular.ttf */; };
 		700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 700BA4FC20E0088E005B3EEA /* Roboto-Thin.ttf */; };
@@ -24,15 +23,20 @@
 		701698ED20EC9B8F00DE7924 /* WeekInfoTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */; };
 		701698EF20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */; };
 		701698F420EDED6900DE7924 /* DayDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701698F320EDED6900DE7924 /* DayDataViewModel.swift */; };
+		7023DD1020F9D2BF0085441B /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023DD0F20F9D2BF0085441B /* AddLocationViewController.swift */; };
 		7046775C20F496C3002E586E /* ViewSettingViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7046775B20F496C3002E586E /* ViewSettingViewController.swift.swift */; };
+		704EE01A20F9DE6A006D5C67 /* AddLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EE01920F9DE6A006D5C67 /* AddLocationViewViewModel.swift */; };
 		7053DB0020EB2815009058C4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053DAFF20EB2815009058C4 /* Notification.swift */; };
+		705911A62109C8AB0072FB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705911A52109C8AB0072FB09 /* LaunchScreen.storyboard */; };
+		707B1E6D20F73D6900F9C7FC /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B1E6C20F73D6900F9C7FC /* LocationTableViewCell.swift */; };
+		707B1E7020F73F1000F9C7FC /* LocationRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B1E6F20F73F1000F9C7FC /* LocationRepresentable.swift */; };
+		707B1E7320F8803D00F9C7FC /* LocationsViewLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B1E7220F8803D00F9C7FC /* LocationsViewLocationViewModel.swift */; };
 		708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708B1E4B20E4B80D0094CEDE /* Assets.xcassets */; };
 		708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */; };
 		708B1E5020E4CDBB0094CEDE /* HourlyDataViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */; };
 		70D47D6920E1D59500B72554 /* HourInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6820E1D59500B72554 /* HourInfoCollectionViewCell.swift */; };
 		70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6B20E1DFFC00B72554 /* SettingsViewController.swift */; };
 		70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */; };
-		70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7020E1E6F600B72554 /* SettingView.storyboard */; };
 		70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D47D7220E1E7C300B72554 /* LocationView.storyboard */; };
 		70D47D7620E20F7700B72554 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7520E20F7700B72554 /* Configuration.swift */; };
 		70D47D7920E213B700B72554 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D47D7820E213B700B72554 /* DataManager.swift */; };
@@ -50,7 +54,6 @@
 		700BA4E720E006AC005B3EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700BA4E920E006AC005B3EEA /* DayMainInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainInfoViewController.swift; sourceTree = "<group>"; };
 		700BA4EC20E006AC005B3EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		700BA4F120E006AD005B3EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		700BA4F320E006AD005B3EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700BA4FA20E0088E005B3EEA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		700BA4FB20E0088E005B3EEA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -64,15 +67,20 @@
 		701698EC20EC9B8E00DE7924 /* WeekInfoTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		701698EE20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekInfoTableViewSectionHeader.xib; sourceTree = "<group>"; };
 		701698F320EDED6900DE7924 /* DayDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDataViewModel.swift; sourceTree = "<group>"; };
+		7023DD0F20F9D2BF0085441B /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		7046775B20F496C3002E586E /* ViewSettingViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSettingViewController.swift.swift; sourceTree = "<group>"; };
+		704EE01920F9DE6A006D5C67 /* AddLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewViewModel.swift; sourceTree = "<group>"; };
 		7053DAFF20EB2815009058C4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		705911A52109C8AB0072FB09 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		707B1E6C20F73D6900F9C7FC /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		707B1E6F20F73F1000F9C7FC /* LocationRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepresentable.swift; sourceTree = "<group>"; };
+		707B1E7220F8803D00F9C7FC /* LocationsViewLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewLocationViewModel.swift; sourceTree = "<group>"; };
 		708B1E4B20E4B80D0094CEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ThinnKhi/Assets.xcassets; sourceTree = "<group>"; };
 		708B1E4D20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHoursInfoViewViewModel.swift; sourceTree = "<group>"; };
 		708B1E4F20E4CDBB0094CEDE /* HourlyDataViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyDataViewViewModel.swift; sourceTree = "<group>"; };
 		70D47D6820E1D59500B72554 /* HourInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		70D47D6B20E1DFFC00B72554 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
-		70D47D7020E1E6F600B72554 /* SettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingView.storyboard; sourceTree = "<group>"; };
 		70D47D7220E1E7C300B72554 /* LocationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationView.storyboard; sourceTree = "<group>"; };
 		70D47D7520E20F7700B72554 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		70D47D7820E213B700B72554 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -188,6 +196,47 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		7023DD0E20F9D2AE0085441B /* Add Location View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7023DD0F20F9D2BF0085441B /* AddLocationViewController.swift */,
+				704EE01820F9DE4E006D5C67 /* View Model */,
+			);
+			path = "Add Location View Controller";
+			sourceTree = "<group>";
+		};
+		704EE01820F9DE4E006D5C67 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				704EE01920F9DE6A006D5C67 /* AddLocationViewViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		707B1E6B20F73C2200F9C7FC /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				707B1E6C20F73D6900F9C7FC /* LocationTableViewCell.swift */,
+			);
+			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		707B1E6E20F73EF500F9C7FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				707B1E6F20F73F1000F9C7FC /* LocationRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		707B1E7120F8801700F9C7FC /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				707B1E7220F8803D00F9C7FC /* LocationsViewLocationViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		70C4269E20EBCD4900B61D05 /* Daily Infomation */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,10 +272,9 @@
 		70D47D6620E0E50D00B72554 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				700BA4F020E006AD005B3EEA /* LaunchScreen.storyboard */,
 				700BA4EB20E006AC005B3EEA /* Main.storyboard */,
-				70D47D7020E1E6F600B72554 /* SettingView.storyboard */,
 				70D47D7220E1E7C300B72554 /* LocationView.storyboard */,
+				705911A52109C8AB0072FB09 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -251,6 +299,10 @@
 			isa = PBXGroup;
 			children = (
 				70D47D6E20E1E1F200B72554 /* LocationsViewController.swift */,
+				7023DD0E20F9D2AE0085441B /* Add Location View Controller */,
+				707B1E6E20F73EF500F9C7FC /* Protocols */,
+				707B1E6B20F73C2200F9C7FC /* TableView Cell */,
+				707B1E7120F8801700F9C7FC /* View Model */,
 			);
 			path = "Locations View Controller";
 			sourceTree = "<group>";
@@ -349,15 +401,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				700BA4FD20E0088E005B3EEA /* Roboto-Medium.ttf in Resources */,
-				700BA4F220E006AD005B3EEA /* LaunchScreen.storyboard in Resources */,
 				70D47D7320E1E7C300B72554 /* LocationView.storyboard in Resources */,
 				700BA4FF20E0088E005B3EEA /* Roboto-Thin.ttf in Resources */,
+				705911A62109C8AB0072FB09 /* LaunchScreen.storyboard in Resources */,
 				701698EF20EC9BF600DE7924 /* WeekInfoTableViewSectionHeader.xib in Resources */,
 				700BA4FE20E0088E005B3EEA /* Roboto-Regular.ttf in Resources */,
 				701698EB20EC713500DE7924 /* WeekInfoTableViewCell.xib in Resources */,
 				700BA4ED20E006AC005B3EEA /* Main.storyboard in Resources */,
 				708B1E4C20E4B80E0094CEDE /* Assets.xcassets in Resources */,
-				70D47D7120E1E6F600B72554 /* SettingView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,10 +422,12 @@
 				7046775C20F496C3002E586E /* ViewSettingViewController.swift.swift in Sources */,
 				700BA50720E02941005B3EEA /* DayInfoViewController.swift in Sources */,
 				7004852F20EA17620082573F /* UIImage.swift in Sources */,
+				707B1E7320F8803D00F9C7FC /* LocationsViewLocationViewModel.swift in Sources */,
 				70D96EB120E3ED7A00DF862F /* WeatherViewController.swift in Sources */,
 				700BA50E20E034E6005B3EEA /* CAGradientLayer.swift in Sources */,
 				70D47D6F20E1E1F200B72554 /* LocationsViewController.swift in Sources */,
 				700BA50320E00C7F005B3EEA /* WeekInfoViewController.swift in Sources */,
+				707B1E7020F73F1000F9C7FC /* LocationRepresentable.swift in Sources */,
 				701698EA20EC713500DE7924 /* WeekInfoTableViewCell.swift in Sources */,
 				700BA50520E00CCC005B3EEA /* DayHoursInfoViewController.swift in Sources */,
 				7053DB0020EB2815009058C4 /* Notification.swift in Sources */,
@@ -384,12 +437,15 @@
 				70D47D7620E20F7700B72554 /* Configuration.swift in Sources */,
 				70D47D8320E29C4800B72554 /* Location.swift in Sources */,
 				70D47D6C20E1DFFC00B72554 /* SettingsViewController.swift in Sources */,
+				7023DD1020F9D2BF0085441B /* AddLocationViewController.swift in Sources */,
 				701698ED20EC9B8F00DE7924 /* WeekInfoTableViewSectionHeader.swift in Sources */,
 				70D47D6920E1D59500B72554 /* HourInfoCollectionViewCell.swift in Sources */,
+				707B1E6D20F73D6900F9C7FC /* LocationTableViewCell.swift in Sources */,
 				708B1E4E20E4C6BC0094CEDE /* DayHoursInfoViewViewModel.swift in Sources */,
 				70D47D7920E213B700B72554 /* DataManager.swift in Sources */,
 				701698F420EDED6900DE7924 /* DayDataViewModel.swift in Sources */,
 				70D47D7C20E214BE00B72554 /* WeatherData.swift in Sources */,
+				704EE01A20F9DE6A006D5C67 /* AddLocationViewViewModel.swift in Sources */,
 				70D47D7F20E22D6700B72554 /* DayMainInfoViewViewModel.swift in Sources */,
 				70D47D8120E2340B00B72554 /* UserDefaults.swift in Sources */,
 				700BA4E820E006AC005B3EEA /* AppDelegate.swift in Sources */,
@@ -405,14 +461,6 @@
 				700BA4EC20E006AC005B3EEA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		700BA4F020E006AD005B3EEA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				700BA4F120E006AD005B3EEA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
